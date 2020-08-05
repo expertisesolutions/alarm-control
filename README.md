@@ -11,3 +11,7 @@ The application makes it easier to:
 * Create triggers from alarm events to other services
 
 All of that while still being a safe application
+
+# License
+
+The application is licensed in the Boost License Version 1.0
