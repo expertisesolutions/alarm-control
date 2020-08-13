@@ -8,14 +8,24 @@ import logo from '../assets/logo.png';
 
 const Login = () =>  {
   return (
-    <View style={styles.container}>
-      <StatusBar style={styles.headbar} barStyle = "light-content" />
-      <Image source={logo} />
-      <TextInput 
-        placeholder="Login"
-        style={styles.input}
+    <View style={styles.containerbackground}>
+      <StatusBar  barStyle="light-content" backgroundColor="#003399" />
+      <View style={styles.container}>
+       <Image source={logo} />
+      </View>
+      <View style={styles.container}>
+        <TextInput 
+          placeholder="Login"
+          style={styles.input}
         />
-      <Text>Expertise Teste Teste</Text>
+        <TextInput 
+          placeholder="Login"
+          style={styles.input}
+        />
+      </View >
+      <View style={styles.foot}>
+
+      </View>
     </View>
   );
 };
@@ -23,6 +33,12 @@ const Login = () =>  {
 const styles = StyleSheet.create({
   headbar:{
     backgroundColor: "#003399",
+  },
+
+  containerbackground: {
+    flex: 1,
+    backgroundColor: "#F2F5F7",
+    height: 'auto',
   },
 
   container: {
@@ -33,20 +49,23 @@ const styles = StyleSheet.create({
     padding: 30,
   },
 
-  imput: {
+  input: {
     height: 46,
     alignSelf: 'stretch',
     backgroundColor: "#FFFF",
     borderWidth: 1,
-    borderColor: '#000',
+    borderColor: '#F2F5F7',
     borderRadius: 4,
     marginTop: 20,
+    marginHorizontal: 10,
     paddingHorizontal: 15,
   },
 
   foot: {
-
-  }
+    flex: 1,
+    backgroundColor: "#003399",
+    height: 50,
+  },
 
 });
 
