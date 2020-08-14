@@ -9,7 +9,11 @@ import logo from '../assets/logo.png';
 
 //const Login= ({ navigation }) =>  {
 
-  export default function Login() {
+  export default function Login({navigation}) {
+     function handloLogin(){
+      navigation.navigate('Main');
+     }
+
   return (
     <KeyboardAvoidingView 
       behavior="padding"
@@ -33,7 +37,7 @@ import logo from '../assets/logo.png';
           placeholderTextColor="#999"
           style={styles.input}
         />
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity onPress={handloLogin} style={styles.button}>
           <Text style={styles.buttonText}>LOGIN</Text>
         </TouchableOpacity>
       </View >

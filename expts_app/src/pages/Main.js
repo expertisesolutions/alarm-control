@@ -1,12 +1,11 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import { View, Text } from 'react-native';
 
-const Main= ({ navigation }) =>  {
+export default function Main() {
   return (
     <View>
-      <Text>Teste Tela 02</Text>
+      <Text>Teste pagina 03</Text>
     </View>
   );
 };
 
-export default Main();
