@@ -1,9 +1,11 @@
 import React from 'react';
-import {View} from 'react-native';
+import {View, Text} from 'react-native';
 
-const Main= () =>  {
+const Main= ({ navigation }) =>  {
   return (
-    <View></View>
+    <View>
+      <Text>Teste Tela 02</Text>
+    </View>
   );
 };
 

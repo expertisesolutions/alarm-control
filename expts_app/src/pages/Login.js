@@ -7,7 +7,9 @@ import {
 //media
 import logo from '../assets/logo.png';
 
-const Login = () =>  {
+//const Login= ({ navigation }) =>  {
+
+  export default function Login() {
   return (
     <KeyboardAvoidingView 
       behavior="padding"
@@ -101,7 +103,7 @@ const styles = StyleSheet.create({
 
 });
 
-export default Login();
+//export default Login();
 
 
 
