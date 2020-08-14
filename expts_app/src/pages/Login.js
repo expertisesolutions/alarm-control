@@ -1,6 +1,7 @@
 import React from 'react';
 import { 
-  Text, View, StyleSheet, StatusBar, Image, TextInput
+  Text, View, StyleSheet, StatusBar, Image, TextInput,
+  TouchableOpacity, KeyboardAvoidingView, Platform
 } from 'react-native';
 
 //media
@@ -8,25 +9,35 @@ import logo from '../assets/logo.png';
 
 const Login = () =>  {
   return (
-    <View style={styles.containerbackground}>
+    <KeyboardAvoidingView 
+      behavior="padding"
+      enabled={Platform.OS === 'ios'}
+      style={styles.containerbackground}
+      >
       <StatusBar  barStyle="light-content" backgroundColor="#003399" />
       <View style={styles.container}>
        <Image source={logo} />
       </View>
       <View style={styles.container}>
         <TextInput 
+          autoCapitalize="none"
+          autoCorrect={false}
           placeholder="Login"
+          placeholderTextColor="#999"
           style={styles.input}
         />
         <TextInput 
           placeholder="Login"
+          placeholderTextColor="#999"
           style={styles.input}
         />
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>LOGIN</Text>
+        </TouchableOpacity>
       </View >
       <View style={styles.foot}>
-
       </View>
-    </View>
+    </KeyboardAvoidingView>
   );
 };
 
@@ -61,11 +72,32 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
   },
 
+  button: {
+    height: 46,
+    alignSelf: 'stretch',
+    backgroundColor: "#003399",
+    borderRadius: 4,
+    marginTop: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginHorizontal: 10,
+  },
+
+  buttonText: {
+    color: '#FFF',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+
   foot: {
     flex: 1,
     backgroundColor: "#003399",
-    height: 50,
+    position: 'relative',
+    height: 20,
+    left: 0,
+    top: 175,
   },
+
 
 });
 
