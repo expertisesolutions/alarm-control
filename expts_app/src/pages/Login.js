@@ -9,9 +9,9 @@ import logo from '../assets/logo.png';
 
 //const Login= ({ navigation }) =>  {
 
-  export default function Login({navigation}) {
+export default function Login({navigation}) {
      function handloLogin(){
-      navigation.navigate('Main');
+      navigation.navigate('Register');
      }
 
   return (
