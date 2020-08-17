@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { 
   Text, View, StyleSheet, StatusBar, Image, TextInput,
   TouchableOpacity, KeyboardAvoidingView, Platform
 } from 'react-native';
   
+  
 export default function Login({navigation}) {
+  const [user, setUser] = useState('');
+
   function handloLogin(){
+
+    //teste para acompanhar se o state foi salvo 
+    console.log(user);
+
     navigation.navigate('Main');
   }
   
@@ -24,11 +31,14 @@ export default function Login({navigation}) {
             placeholder="Login"
             placeholderTextColor="#999"
             style={styles.input}
+
+            value={user}
+            onChangeText={setUser}
           />
           <TextInput
             autoCapitalize="none"
             autoCorrect={false}
-            placeholder="Pass**"
+            placeholder="Pass"
             placeholderTextColor="#999"
             style={styles.input}
           />
