@@ -7,6 +7,7 @@ import {
 //media
 import logo from '../assets/logo.png';
 import server from '../assets/server.png';
+import serverOff from '../assets/serverOff.png';
 
 export default function Register({navigation}) {
   function handloLogin(){
@@ -23,22 +24,31 @@ export default function Register({navigation}) {
     <View style={styles.container}>
       <Image source={logo} />
     </View>
+
     <View style={styles.container}>
-      <View>
-      <Image source={server} />
-     <TouchableOpacity onPress={handloLogin} style={styles.button}>
-        <Text style={styles.buttonText}>Home assistant - Casa</Text>
-      </TouchableOpacity>
-      </View>
+      <View style={styles.containerServ}>
+        <Image source={server} style={styles.iconserv}/>
+        <TouchableOpacity onPress={handloLogin} style={styles.button}>
+          <Text style={styles.buttonText}>Home assistant - Casa</Text>
+        </TouchableOpacity>
+    </View>
+
+    <View style={styles.containerServ}>
+      <Image source={server} style={styles.iconserv}/>
       <TouchableOpacity onPress={handloLogin} style={styles.button}>
-        <Text style={styles.buttonText}>Servidor escritorio</Text>
+          <Text style={styles.buttonText}>Servidor escritorio</Text>
       </TouchableOpacity>
+    </View>
+
+      
+    <View style={styles.containerServ}>
+      <Image source={serverOff} style={styles.iconserv}/>
       <TouchableOpacity onPress={handloLogin} style={styles.buttonOff}>
         <Text style={styles.buttonText}>Deposito</Text>
       </TouchableOpacity>
-      
+    </View>
     </View >
-    <View style={styles.foot}>
+      <View style={styles.foot}>
     </View>
   </KeyboardAvoidingView>
   );
@@ -63,16 +73,12 @@ const styles = StyleSheet.create({
     padding: 30,
   },
 
-  input: {
-    height: 46,
-    alignSelf: 'stretch',
-    backgroundColor: "#FFFF",
-    borderWidth: 1,
-    borderColor: '#F2F5F7',
-    borderRadius: 4,
-    marginTop: 20,
-    marginHorizontal: 10,
-    paddingHorizontal: 15,
+  containerServ: {
+    flex: 1,
+    flexDirection: 'row',
+    backgroundColor: "#F2F5F7",
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 
   button: {
@@ -86,6 +92,17 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
   },
 
+  buttonText: {
+    color: '#FFF',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+
+  iconserv: {
+    alignSelf: 'stretch',
+    marginTop: 25,
+  },
+
   buttonOff: {
     height: 46,
     alignSelf: 'stretch',
@@ -95,12 +112,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginHorizontal: 10,
-  },
-
-  buttonText: {
-    color: '#FFF',
-    fontSize: 16,
-    fontWeight: 'bold',
   },
 
   foot: {
