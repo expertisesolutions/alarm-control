@@ -55,9 +55,6 @@ export default function Register({navigation}) {
 };
 
 const styles = StyleSheet.create({
-  headbar:{
-    backgroundColor: "#003399",
-  },
 
   containerbackground: {
     flex: 1,
@@ -90,6 +87,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginHorizontal: 10,
+    width: '80%',
   },
 
   buttonText: {
@@ -112,6 +110,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginHorizontal: 10,
+    width: '80%',
   },
 
   foot: {
