@@ -10,10 +10,12 @@ import server from '../assets/server.png';
 import serverOff from '../assets/serverOff.png';
 
 export default function Register({navigation}) {
-  function handloLogin(){
-   navigation.navigate('Main');
+  function Testedeconexao(){
+   navigation.navigate('Test');
   }
-
+  function handloLogin(){
+    navigation.navigate('Test');
+   }
   return (
   <KeyboardAvoidingView 
     behavior="padding"
@@ -28,7 +30,7 @@ export default function Register({navigation}) {
     <View style={styles.container}>
       <View style={styles.containerServ}>
         <Image source={server} style={styles.iconserv}/>
-        <TouchableOpacity onPress={handloLogin} style={styles.button}>
+        <TouchableOpacity onPress={Testedeconexao} style={styles.button}>
           <Text style={styles.buttonText}>Home assistant - Casa</Text>
         </TouchableOpacity>
     </View>
