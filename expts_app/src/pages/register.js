@@ -24,18 +24,10 @@ export default function Register({navigation}) {
       <Image source={logo} />
     </View>
     <View style={styles.container}>
-
     <Image source={server} />
      <TouchableOpacity onPress={handloLogin} style={styles.button}>
-        <Text style={styles.buttonText}>Home assistant - Casa</Text>
+        <Text style={styles.buttonText}></Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={handloLogin} style={styles.button}>
-        <Text style={styles.buttonText}>Servidor escritorio</Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={handloLogin} style={styles.buttonOff}>
-        <Text style={styles.buttonText}>Deposito</Text>
-      </TouchableOpacity>
-      
     </View >
     <View style={styles.foot}>
     </View>

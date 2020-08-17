@@ -6,9 +6,8 @@ import {
 
 //media
 import logo from '../assets/logo.png';
-import server from '../assets/server.png';
 
-export default function Register({navigation}) {
+export default function Main({navigation}) {
   function handloLogin(){
    navigation.navigate('Main');
   }
@@ -24,19 +23,21 @@ export default function Register({navigation}) {
       <Image source={logo} />
     </View>
     <View style={styles.container}>
-      <View>
-      <Image source={server} />
-     <TouchableOpacity onPress={handloLogin} style={styles.button}>
-        <Text style={styles.buttonText}>Home assistant - Casa</Text>
-      </TouchableOpacity>
-      </View>
+      <TextInput 
+        autoCapitalize="none"
+        autoCorrect={false}
+        placeholder="Login"
+        placeholderTextColor="#999"
+        style={styles.input}
+      />
+      <TextInput 
+        placeholder="Login"
+        placeholderTextColor="#999"
+        style={styles.input}
+      />
       <TouchableOpacity onPress={handloLogin} style={styles.button}>
-        <Text style={styles.buttonText}>Servidor escritorio</Text>
+        <Text style={styles.buttonText}>LOGIN</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={handloLogin} style={styles.buttonOff}>
-        <Text style={styles.buttonText}>Deposito</Text>
-      </TouchableOpacity>
-      
     </View >
     <View style={styles.foot}>
     </View>
@@ -78,18 +79,7 @@ const styles = StyleSheet.create({
   button: {
     height: 46,
     alignSelf: 'stretch',
-    backgroundColor: "#6FCF97",
-    borderRadius: 4,
-    marginTop: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginHorizontal: 10,
-  },
-
-  buttonOff: {
-    height: 46,
-    alignSelf: 'stretch',
-    backgroundColor: "#E0E0E0",
+    backgroundColor: "#003399",
     borderRadius: 4,
     marginTop: 20,
     justifyContent: 'center',

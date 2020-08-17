@@ -11,7 +11,7 @@ import logo from '../assets/logo.png';
 
 export default function Login({navigation}) {
      function handloLogin(){
-      navigation.navigate('Register');
+      navigation.navigate('Main');
      }
 
   return (
