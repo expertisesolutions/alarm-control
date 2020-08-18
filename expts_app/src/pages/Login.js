@@ -103,11 +103,5 @@ const styles = StyleSheet.create({
     left: 0,
     top: 175,
   },
-
-
-});
-
-//export default Login();
-
-
-
+ }
+);
