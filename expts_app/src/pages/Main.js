@@ -4,6 +4,10 @@ import {
   TouchableOpacity, KeyboardAvoidingView, Platform
 } from 'react-native';
 
+
+//import hass from '../secrets/Hasss'
+
+
 //media
 import logo from '../assets/logo.png';
 import server from '../assets/server.png';

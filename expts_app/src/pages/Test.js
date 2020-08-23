@@ -14,26 +14,26 @@ import {
 import hass from 'homeassistant-ws'
 
 
-
-
 //---------------------------------
 
 
 
 export default function Login({navigation}) {
   const [user, setUser] = useState('');
+  const [teste, settest] = useState('');
 
-
+  
   async function main () {
     // Assuming hass running in `localhost`, under the default `8321` port:
     const client = await hass({
-      token: 'my-secret-token'
+      token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI2Yjk4Y2ZhYzRkN2E0YjJhOWM0M2Y4OGM2YTk0OWQzOCIsImlhdCI6MTU5NzY5MjQ1MCwiZXhwIjoxOTEzMDUyNDUwfQ.0_uZvj7-7RZSZGpNq7BygRdX6UjXonnFQCO6CudQJnw'
     })
+    console.log(client.getStates)
+    settest('teste debug');
   }
+
+  main();
   
-
-  let teste = 'teste';
-
   function handloLogin(){
 
     //teste para acompanhar se o state foi salvo 

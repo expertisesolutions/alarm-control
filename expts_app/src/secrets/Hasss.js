@@ -1,6 +1,6 @@
-hass({
+export default hass({
   protocol: 'ws',
-  host: 'localhost',
+  host: '192.168.1.110',
   port: 8123,
   path: '/api/websocket',
  
