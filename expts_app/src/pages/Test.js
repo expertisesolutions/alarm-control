@@ -7,15 +7,13 @@ import {
   
   
 
-
-
 //-----------------------------------------------------------------------
 
 import hass from 'homeassistant-ws'
-
+//import configHass from '../secrets/Hasss'
+import api from '../services/api';
 
 //---------------------------------
-
 
 
 export default function Login({navigation}) {
@@ -26,16 +24,27 @@ export default function Login({navigation}) {
   async function main () {
     // Assuming hass running in `localhost`, under the default `8321` port:
     const client = await hass({
+      host: '192.168.1.110',
       token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI2Yjk4Y2ZhYzRkN2E0YjJhOWM0M2Y4OGM2YTk0OWQzOCIsImlhdCI6MTU5NzY5MjQ1MCwiZXhwIjoxOTEzMDUyNDUwfQ.0_uZvj7-7RZSZGpNq7BygRdX6UjXonnFQCO6CudQJnw'
-    })
-    console.log(client.getStates)
-    settest('teste debug');
+    });
+
+    
+
+    console.log(await client.getStates());
+
+    console.log('----------------------------------------------------------');
+
+    console.log(await client.callService('teste_play', 'media_player.play_media', { entity_id: 'media_player.spotify_ricardo_campos' }));
+
+    //settest('teste debug');
   }
 
   main();
   
   function handloLogin(){
 
+    //const reponse = await api.post('');
+    //const { } = Response.data;
     //teste para acompanhar se o state foi salvo 
     console.log(user);
 
@@ -48,7 +57,7 @@ export default function Login({navigation}) {
         enabled={Platform.OS === 'ios'}
         style={styles.containerbackground}
         >
-        <Text>{user}</Text>
+        <Text>{}</Text>
         <StatusBar  barStyle="light-content" backgroundColor="#003399" />
         <View style={styles.container}>
           <TextInput 
