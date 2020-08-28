@@ -34,7 +34,8 @@ export default function Login({navigation}) {
 
     console.log('----------------------------------------------------------');
 
-    console.log(await client.callService('teste_play', 'media_player.play_media', { entity_id: 'media_player.spotify_ricardo_campos' }));
+   // console.log(await client.callService('spotify_music', 'media_player.play_media', { entity_id: 'media_player.spotify' }));
+    console.log(await client.callService('media_player.play_media', '', { entity_id: 'media_player.spotify_ricardo_campos'}));
 
     //settest('teste debug');
   }
@@ -63,7 +64,7 @@ export default function Login({navigation}) {
           <TextInput 
             autoCapitalize="none"
             autoCorrect={false}
-            placeholder="Login"
+            placeholder="dispositivo"
             placeholderTextColor="#999"
             style={styles.input}
 
@@ -73,12 +74,12 @@ export default function Login({navigation}) {
           <TextInput
             autoCapitalize="none"
             autoCorrect={false}
-            placeholder="Pass"
+            placeholder="entity"
             placeholderTextColor="#999"
             style={styles.input}
           />
           <TouchableOpacity onPress={handloLogin} style={styles.button}>
-            <Text style={styles.buttonText}>Test</Text>
+            <Text style={styles.buttonText}>Enviar</Text>
           </TouchableOpacity>
         </View >
       </KeyboardAvoidingView>
