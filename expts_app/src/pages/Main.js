@@ -14,7 +14,7 @@ export default function Register({navigation}) {
    navigation.navigate('Test');
   }
   function handloLogin(){
-    navigation.navigate('Test');
+    navigation.navigate('Addserver');
    }
   return (
   <KeyboardAvoidingView 
