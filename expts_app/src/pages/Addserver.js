@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   View, Text, StyleSheet, KeyboardAvoidingView, StatusBar, Image,
-  TextInput
+  TextInput, TouchableOpacity
 
 } from 'react-native';
 
@@ -54,30 +54,39 @@ export default function Addserver({navigation}) {
         <TextInput 
           autoCapitalize="none"
           autoCorrect={false}
-          placeholder="Nome"
+          placeholder="IP/Host"
           placeholderTextColor="#999"
           style={styles.input}
         />
         <TextInput 
           autoCapitalize="none"
           autoCorrect={false}
-          placeholder="Nome"
+          placeholder="Login"
           placeholderTextColor="#999"
           style={styles.input}
         />
         <TextInput 
           autoCapitalize="none"
           autoCorrect={false}
-          placeholder="Nome"
+          placeholder="Password"
           placeholderTextColor="#999"
           style={styles.input}
         />
-        
+        <TextInput 
+          autoCapitalize="none"
+          autoCorrect={false}
+          placeholder="Confirma Password"
+          placeholderTextColor="#999"
+          style={styles.input}
+        />
+        <TouchableOpacity onPress={handloLogin} style={styles.button}>
+          <Text style={styles.buttontext}>Add server</Text>
+        </TouchableOpacity>
       </View>
 
       {/* Foot*/}
       <View style={styles.view_foot}>
-        <Text>Foot</Text>
+        <Text style={styles.foottext}>Não possui acesso ? <Text style={styles.foottextBold}>Solicitar</Text></Text>
       </View>
 
 
@@ -116,21 +125,20 @@ const styles = StyleSheet.create({
   container_logo: {
     justifyContent: 'center',
     alignItems: 'center',
-    height: '35%',
+    height: '30%',
     padding: 30,
   },
 
   view_form: {
     justifyContent: 'center',
     alignItems: 'center',
-    height:'50%',
-    padding: 10,
+    height:'53%',
+    padding: 7,
   },
   view_foot: {
-    justifyContent: 'center',
+    //justifyContent: 'center',
     alignItems: 'center',
-    height: '8%',
-    padding: 30,
+    height: '10%',
   },
 
   img_left: {
@@ -153,21 +161,51 @@ const styles = StyleSheet.create({
   text_head:{
     color: '#FFF',
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: 'normal',
     marginLeft: 10,
   },
 
   input: {
-    height: 46,
+    height: 42,
     alignSelf: 'stretch',
     backgroundColor: "#FFFF",
     borderWidth: 1,
     borderColor: '#F2F5F7',
     borderRadius: 4,
-    marginTop: 20,
+    marginTop: 12,
     marginHorizontal: 10,
     paddingHorizontal: 15,
   },
+
+  button: {
+    height: 46,
+    alignSelf: 'stretch',
+    backgroundColor: "#003399",
+    borderRadius: 4,
+    marginTop: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginHorizontal: 10,
+  },
+
+  buttontext: {
+    color: '#FFF',
+    fontSize: 16,
+    fontWeight: 'normal',
+  },
+
+  foottext: {
+    color: '#000',
+    fontSize: 16,
+    fontWeight: 'normal',
+  },
+
+  foottextBold: {
+    color: '#000',
+    fontSize: 16,
+    fontWeight: 'bold' ,
+  },
+
 
 });
 
