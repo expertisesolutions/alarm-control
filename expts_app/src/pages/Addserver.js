@@ -1,6 +1,7 @@
 import React from 'react';
 import {
-  View, Text, StyleSheet, KeyboardAvoidingView, StatusBar, Image
+  View, Text, StyleSheet, KeyboardAvoidingView, StatusBar, Image,
+  TextInput
 
 } from 'react-native';
 
@@ -41,6 +42,44 @@ export default function Addserver({navigation}) {
        <Image style={styles.img_logo} source={logo} />
       </View>
 
+      {/* Formularios*/}
+      <View style={styles.view_form}>
+      <TextInput 
+          autoCapitalize="none"
+          autoCorrect={false}
+          placeholder="Nome"
+          placeholderTextColor="#999"
+          style={styles.input}
+        />
+        <TextInput 
+          autoCapitalize="none"
+          autoCorrect={false}
+          placeholder="Nome"
+          placeholderTextColor="#999"
+          style={styles.input}
+        />
+        <TextInput 
+          autoCapitalize="none"
+          autoCorrect={false}
+          placeholder="Nome"
+          placeholderTextColor="#999"
+          style={styles.input}
+        />
+        <TextInput 
+          autoCapitalize="none"
+          autoCorrect={false}
+          placeholder="Nome"
+          placeholderTextColor="#999"
+          style={styles.input}
+        />
+        
+      </View>
+
+      {/* Foot*/}
+      <View style={styles.view_foot}>
+        <Text>Foot</Text>
+      </View>
+
 
     </KeyboardAvoidingView>
   );
@@ -50,7 +89,7 @@ export default function Addserver({navigation}) {
 const styles = StyleSheet.create({
   containerbackground: {
     flex: 1,
-    //backgroundColor: "#F2F5F7",
+    backgroundColor: "#F2F5F7",
     paddingHorizontal: 0,
     //paddingTop: Constant
   },
@@ -59,7 +98,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between' ,
     backgroundColor: "#003399",
-    height: 50,
+    height:'7%',
     alignItems: 'center',
   },
   
@@ -75,10 +114,22 @@ const styles = StyleSheet.create({
   },
 
   container_logo: {
-    flex: 1,
-    backgroundColor: "#F2F5F7",
     justifyContent: 'center',
     alignItems: 'center',
+    height: '35%',
+    padding: 30,
+  },
+
+  view_form: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    height:'50%',
+    padding: 10,
+  },
+  view_foot: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '8%',
     padding: 30,
   },
 
@@ -104,7 +155,19 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     marginLeft: 10,
-  }
+  },
+
+  input: {
+    height: 46,
+    alignSelf: 'stretch',
+    backgroundColor: "#FFFF",
+    borderWidth: 1,
+    borderColor: '#F2F5F7',
+    borderRadius: 4,
+    marginTop: 20,
+    marginHorizontal: 10,
+    paddingHorizontal: 15,
+  },
 
 });
 
