@@ -10,12 +10,25 @@ import server from '../assets/server.png';
 import serverOff from '../assets/serverOff.png';
 
 export default function Register({navigation}) {
-  function Testedeconexao(){
+
+
+  function testedeconexao(){
    navigation.navigate('Test');
   }
-  function handloLogin(){
+
+  function paginaAdd(){
     navigation.navigate('Addserver');
-   }
+  }
+
+  function paginaAtiva(){
+    navigation.navigate('Ativaalarm');
+  }
+
+  function paginaMain(){
+    navigation.navigate('Main');
+  }
+
+
   return (
   <KeyboardAvoidingView 
     behavior="padding"
@@ -30,25 +43,40 @@ export default function Register({navigation}) {
     <View style={styles.container}>
       <View style={styles.containerServ}>
         <Image source={server} style={styles.iconserv}/>
-        <TouchableOpacity onPress={Testedeconexao} style={styles.button}>
-          <Text style={styles.buttonText}>Home assistant - Casa</Text>
+        <TouchableOpacity onPress={testedeconexao} style={styles.button}>
+          <Text style={styles.buttonText}>Teste Home assitent</Text>
         </TouchableOpacity>
     </View>
 
     <View style={styles.containerServ}>
       <Image source={server} style={styles.iconserv}/>
-      <TouchableOpacity onPress={handloLogin} style={styles.button}>
-          <Text style={styles.buttonText}>Servidor escritorio</Text>
+      <TouchableOpacity onPress={paginaAdd} style={styles.button}>
+          <Text style={styles.buttonText}>Add Server</Text>
       </TouchableOpacity>
     </View>
 
       
     <View style={styles.containerServ}>
-      <Image source={serverOff} style={styles.iconserv}/>
-      <TouchableOpacity onPress={handloLogin} style={styles.buttonOff}>
-        <Text style={styles.buttonText}>Deposito</Text>
+      <Image source={server} style={styles.iconserv}/>
+      <TouchableOpacity onPress={paginaAtiva} style={styles.button}>
+        <Text style={styles.buttonText}>Armar alarme</Text>
       </TouchableOpacity>
     </View>
+
+    <View style={styles.containerServ}>
+      <Image source={serverOff} style={styles.iconserv}/>
+      <TouchableOpacity onPress={paginaMain} style={styles.buttonOff}>
+        <Text style={styles.buttonText}> ---- </Text>
+      </TouchableOpacity>
+    </View>
+
+    <View style={styles.containerServ}>
+      <Image source={serverOff} style={styles.iconserv}/>
+      <TouchableOpacity onPress={paginaMain} style={styles.buttonOff}>
+        <Text style={styles.buttonText}> ---- </Text>
+      </TouchableOpacity>
+    </View>
+    
     </View >
       <View style={styles.foot}>
     </View>
@@ -61,11 +89,10 @@ const styles = StyleSheet.create({
   containerbackground: {
     flex: 1,
     backgroundColor: "#F2F5F7",
-    height: 'auto',
+    justifyContent:'space-between',
   },
 
   container: {
-    flex: 1,
     backgroundColor: "#F2F5F7",
     justifyContent: 'center',
     alignItems: 'center',
@@ -73,7 +100,6 @@ const styles = StyleSheet.create({
   },
 
   containerServ: {
-    flex: 1,
     flexDirection: 'row',
     backgroundColor: "#F2F5F7",
     justifyContent: 'center',
@@ -116,11 +142,7 @@ const styles = StyleSheet.create({
   },
 
   foot: {
-    flex: 1,
     backgroundColor: "#003399",
-    position: 'relative',
-    height: 20,
-    left: 0,
-    top: 175,
+    height: "8%",
   },
 });
