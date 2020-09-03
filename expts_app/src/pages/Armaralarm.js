@@ -7,6 +7,7 @@ import {
 
 //media
 import left from '../assets/left.png';
+import home from '../assets/home.png';
 import logo from '../assets/logo.png';
 import lupa from '../assets/lupa.png';
 import opcao from '../assets/opcao.png';
@@ -27,6 +28,7 @@ export default function Ativaalarm({navigation}) {
  
        {/* HEAD */}
        <View style={styles.container_head}>
+       <View style={styles.viewhead}>
         <View style={styles.head_left}>
           <Image style={styles.img_left} source={left} />
           <Text style={styles.text_head}> Adicionar Server</Text>
@@ -36,7 +38,29 @@ export default function Ativaalarm({navigation}) {
           <Image style={styles.img_right} source={opcao} />
         </View>
        </View>
+
+      {/*Titulo*/}
+
+      <View style={styles.viewtitulo}>
+        <Image style={styles.imagetitulo} source={home}/>
+      </View>
+      </View>
+      {/*Body*/}
+
+      <View style={styles.viewbody}>
+        <Image style={styles.imagetitulo} source={logo}/>
+      </View>
+
+      {/*Foot*/}
+
+      <View style={styles.viewfoot}>
+        <Image style={styles.imagetitulo} source={logo}/>
+      </View>
+
+
+
        </KeyboardAvoidingView>
+
   );
 };
 
@@ -45,16 +69,22 @@ const styles = StyleSheet.create({
 
   containerbackground: {
     flex: 1,
-    backgroundColor: "#F2F5F7",
+    //backgroundColor: "#F2F5F7",
+    backgroundColor: "#FFF",
     paddingHorizontal: 0,
+    justifyContent: 'space-between' ,
     //paddingTop: Constant
   },
 
   container_head: {
+    height:'20%',
+  },
+
+  viewhead: {
     flexDirection: 'row',
     justifyContent: 'space-between' ,
     backgroundColor: "#003399",
-    height:'7%',
+    height:'40%',
     alignItems: 'center',
   },
 
@@ -92,5 +122,34 @@ const styles = StyleSheet.create({
     width: 20,
     marginTop: 5,
   },
+
+  imagetitulo: {
+    height: 40,
+    width: 40,
+  },
+
+  viewtitulo: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 15,
+    height:'60%',
+  },
+
+  viewbody: {
+    backgroundColor: "#F2F5F7",
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 15,
+    height:'auto',
+  },
+
+  viewfoot: {
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    justifyContent: 'flex-end' ,
+    padding: 15,
+    height:'12%',
+  },
+
 
 });
