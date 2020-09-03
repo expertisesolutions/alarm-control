@@ -1,6 +1,7 @@
 import React from 'react';
 import {
-  View, Text, StyleSheet, KeyboardAvoidingView, StatusBar, Image
+  View, Text, StyleSheet, KeyboardAvoidingView, StatusBar, Image,
+  TouchableOpacity
 
 } from 'react-native';
 
@@ -32,7 +33,9 @@ export default function Ativaalarm({navigation}) {
          {/* HEAD */}
         <View style={styles.viewhead}>
           <View style={styles.head_left}>
-            <Image style={styles.img_left} source={left} />
+            <TouchableOpacity onPress={handMain}>
+              <Image  style={styles.img_left} source={left} />
+            </TouchableOpacity>
             <Text style={styles.text_head}> Adicionar Server</Text>
           </View>
           <View style={styles.head_right}> 
@@ -64,6 +67,26 @@ export default function Ativaalarm({navigation}) {
           <Image style={styles.imagetitulo} source={soma}/>
         </View>
         
+        <View style={styles.viewdiv}/>
+        <View style={styles.viewitem}>
+          <Image style={styles.imagetitulo} source={logo}/>
+          <View style={styles.viewitemtext}>
+            <Text style={styles.itemtextbold}> Churrasqueira</Text>
+            <Text style={styles.itemtext}> Festa noturna edicula</Text>
+          </View>
+          <Image style={styles.imagetitulo} source={soma}/>
+        </View>
+
+        <View style={styles.viewdiv}/>
+        <View style={styles.viewitem}>
+          <Image style={styles.imagetitulo} source={logo}/>
+          <View style={styles.viewitemtext}>
+            <Text style={styles.itemtextbold}> Churrasqueira</Text>
+            <Text style={styles.itemtext}> Festa noturna edicula</Text>
+          </View>
+          <Image style={styles.imagetitulo} source={soma}/>
+        </View>
+
         <View style={styles.viewdiv}/>
         <View style={styles.viewitem}>
           <Image style={styles.imagetitulo} source={logo}/>

@@ -28,7 +28,9 @@ export default function Addserver({navigation}) {
       {/* HEAD */}
       <View style={styles.container_head}>
        <View style={styles.head_left}>
-         <Image style={styles.img_left} source={left} />
+         <TouchableOpacity onPress={handMain}>
+          <Image  style={styles.img_left} source={left} />
+         </TouchableOpacity>
          <Text style={styles.text_head}> Adicionar Server</Text>
        </View>
        <View style={styles.head_right}> 
