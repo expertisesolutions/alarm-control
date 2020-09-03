@@ -1,7 +1,6 @@
 import React from 'react';
 import {
-  View, Text, StyleSheet, KeyboardAvoidingView, StatusBar, Image,
-  TextInput, TouchableOpacity
+  View, Text, StyleSheet, KeyboardAvoidingView, StatusBar, Image
 
 } from 'react-native';
 
@@ -11,6 +10,7 @@ import home from '../assets/home.png';
 import logo from '../assets/logo.png';
 import lupa from '../assets/lupa.png';
 import opcao from '../assets/opcao.png';
+import soma from '../assets/soma.png';
 
 export default function Ativaalarm({navigation}) {
   function handMain(){
@@ -26,35 +26,70 @@ export default function Ativaalarm({navigation}) {
        {/* Status bar */}
        <StatusBar  barStyle="light-content" backgroundColor="#7C7B7B" />
  
-       {/* HEAD */}
+       {/* GRUPO HEAD */}
        <View style={styles.container_head}>
-       <View style={styles.viewhead}>
-        <View style={styles.head_left}>
-          <Image style={styles.img_left} source={left} />
-          <Text style={styles.text_head}> Adicionar Server</Text>
-        </View>
-        <View style={styles.head_right}> 
-          <Image style={styles.img_right} source={lupa} />
-          <Image style={styles.img_right} source={opcao} />
-        </View>
-       </View>
 
-      {/*Titulo*/}
+         {/* HEAD */}
+        <View style={styles.viewhead}>
+          <View style={styles.head_left}>
+            <Image style={styles.img_left} source={left} />
+            <Text style={styles.text_head}> Adicionar Server</Text>
+          </View>
+          <View style={styles.head_right}> 
+            <Image style={styles.img_right} source={lupa} />
+            <Image style={styles.img_right} source={opcao} />
+          </View>
+        </View>
 
-      <View style={styles.viewtitulo}>
-        <Image style={styles.imagetitulo} source={home}/>
+        {/*Titulo*/}
+        <View style={styles.viewtitulo}>
+          <Image style={styles.imagetitulo} source={home}/>
+          <View>
+           <Text> CASA PRAIA</Text>
+           <Text> Central de automação</Text>
+          </View>
+        </View>
       </View>
-      </View>
+
       {/*Body*/}
-
       <View style={styles.viewbody}>
-        <Image style={styles.imagetitulo} source={logo}/>
+        
+        <View style={styles.viewdiv}/>
+        <View style={styles.viewitem}>
+          <Image style={styles.imagetitulo} source={logo}/>
+          <View style={styles.viewitemtext}>
+            <Text style={styles.itemtextbold}> Churrasqueira</Text>
+            <Text style={styles.itemtext}> Festa noturna edicula</Text>
+          </View>
+          <Image style={styles.imagetitulo} source={soma}/>
+        </View>
+        
+        <View style={styles.viewdiv}/>
+        <View style={styles.viewitem}>
+          <Image style={styles.imagetitulo} source={logo}/>
+          <View style={styles.viewitemtext}>
+            <Text style={styles.itemtextbold}> Churrasqueira</Text>
+            <Text style={styles.itemtext}> Festa noturna edicula</Text>
+          </View>
+          <Image style={styles.imagetitulo} source={soma}/>
+        </View>
+
+        <View style={styles.viewdiv}/>
+        <View style={styles.viewitem}>
+          <Image style={styles.imagetitulo} source={logo}/>
+          <View style={styles.viewitemtext}>
+            <Text style={styles.itemtextbold}> Churrasqueira</Text>
+            <Text style={styles.itemtext}> Festa noturna edicula</Text>
+          </View>
+          <Image style={styles.imagetitulo} source={soma}/>
+        </View>
+
+        <View style={styles.viewdiv}/>
       </View>
 
       {/*Foot*/}
-
       <View style={styles.viewfoot}>
-        <Image style={styles.imagetitulo} source={logo}/>
+        <Image style={styles.footimg} source={soma}/>
       </View>
 
 
@@ -136,20 +171,53 @@ const styles = StyleSheet.create({
   },
 
   viewbody: {
-    backgroundColor: "#F2F5F7",
-    flexDirection: 'row',
-    alignItems: 'center',
-    padding: 15,
     height:'auto',
   },
 
   viewfoot: {
     flexDirection: 'row',
-    alignItems: 'flex-end',
+    //alignItems: 'flex-end',
     justifyContent: 'flex-end' ,
     padding: 15,
     height:'12%',
   },
 
+  viewitem: {
+    backgroundColor: "#F2F5F7",
+    flexDirection: 'row',
+    //justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: 10,
+  },
+
+  viewdiv: {
+    height: 1,
+    backgroundColor: '#BABABA'
+  },
+
+  viewitemtext:{
+    width:'70%',
+    justifyContent:'center',
+  },
+
+  itemtextbold:{
+    color: '#000',
+    fontSize: 15,
+    fontWeight: 'bold' ,
+    alignItems:'flex-start',
+
+  },
+
+  itemtext:{
+    color: '#000',
+    fontSize: 15,
+    fontWeight: 'normal',
+  },
+
+  footimg: {
+    height: 48,
+    width: 48,
+    marginRight: 40,
+  }
 
 });
