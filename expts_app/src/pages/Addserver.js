@@ -12,7 +12,7 @@ import lupa from '../assets/lupa.png';
 import opcao from '../assets/opcao.png';
 
 export default function Addserver({navigation}) {
-  function handloLogin(){
+  function handMain(){
    navigation.navigate('Main');
   }
 
@@ -79,7 +79,7 @@ export default function Addserver({navigation}) {
           placeholderTextColor="#999"
           style={styles.input}
         />
-        <TouchableOpacity onPress={handloLogin} style={styles.button}>
+        <TouchableOpacity onPress={handMain} style={styles.button}>
           <Text style={styles.buttontext}>Add server</Text>
         </TouchableOpacity>
       </View>
