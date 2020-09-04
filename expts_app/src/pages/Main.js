@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   View, Text, StyleSheet, KeyboardAvoidingView, StatusBar, Image, 
-  TouchableOpacity
+  TouchableOpacity, Form
 } from 'react-native';
 
 //media
@@ -42,7 +42,7 @@ export default function Main({navigation}) {
 
         {/* Titulo */}
         <View style={styles.view_titulo}>
-
+          <Text>MENU GERAL</Text>
         </View>
 
         {/* Itens */}
@@ -51,9 +51,11 @@ export default function Main({navigation}) {
         </View>
 
       </View>
+
       {/* Foot */}
       <View style={styles.view_foot}>
-        
+        <Text>0 Informações</Text>
+        <Text>NEXT</Text>
       </View>
 
     </KeyboardAvoidingView>
@@ -66,13 +68,13 @@ const styles = StyleSheet.create({
 
   containerbackground: {
     flex: 1,
-    backgroundColor: "#CC0000",
     justifyContent: 'space-between',
   },
 
   container_head: {
     flexDirection: 'row',
     justifyContent: 'space-between' ,
+    backgroundColor: "#CC0000",
     height:'8%',
   },
 
@@ -90,7 +92,8 @@ const styles = StyleSheet.create({
   },
 
   view_body:{
-
+    backgroundColor: "#CC0000",
+    height: "85%",
   },
 
   view_titulo:{
@@ -99,10 +102,11 @@ const styles = StyleSheet.create({
 
   view_itens:{
 
-  },
+  },   
 
   view_foot: {
-
+    backgroundColor: "#3A3B3C",
+    height: "7%",
   },
 
 
