@@ -1,148 +1,128 @@
 import React from 'react';
-import { 
-  Text, View, StyleSheet, StatusBar, Image, TextInput,
-  TouchableOpacity, KeyboardAvoidingView, Platform
+import {
+  View, Text, StyleSheet, KeyboardAvoidingView, StatusBar, Image, 
+  TouchableOpacity
 } from 'react-native';
 
 //media
-import logo from '../assets/logo.png';
-import server from '../assets/server.png';
-import serverOff from '../assets/serverOff.png';
+import left from '../assets/left.png';
+import lupa from '../assets/lupa.png';
+import opcao from '../assets/opcao.png';
 
-export default function Register({navigation}) {
-
-
-  function testedeconexao(){
-   navigation.navigate('Test');
+export default function Main({navigation}) {
+  function handMain(){
+   navigation.navigate('Login');
   }
-
-  function paginaAdd(){
-    navigation.navigate('Addserver');
-  }
-
-  function paginaAtiva(){
-    navigation.navigate('Ativaalarm');
-  }
-
-  function paginaMain(){
-    navigation.navigate('Main');
-  }
-
 
   return (
-  <KeyboardAvoidingView 
-    behavior="padding"
-    enabled={Platform.OS === 'ios'}
-    style={styles.containerbackground}
-    >
-    <StatusBar  barStyle="light-content" backgroundColor="#003399" />
-    <View style={styles.container}>
-      <Image source={logo} />
-    </View>
+    <KeyboardAvoidingView 
+        behavior="padding"
+        enabled={Platform.OS === 'ios'}
+        style={styles.containerbackground}
+    >     
+      {/* Status bar */}
+      <StatusBar  barStyle="light-content" backgroundColor="#7C7B7B" />
 
-    <View style={styles.container}>
-      <View style={styles.containerServ}>
-        <Image source={server} style={styles.iconserv}/>
-        <TouchableOpacity onPress={testedeconexao} style={styles.button}>
-          <Text style={styles.buttonText}>Teste Home assitent</Text>
-        </TouchableOpacity>
-    </View>
+      {/* HEAD */}
+      <View style={styles.container_head}>
+       <View style={styles.head_left}>
+         <TouchableOpacity onPress={handMain}>
+          <Image  style={styles.img_left} source={left} />
+         </TouchableOpacity>
+         <Text style={styles.text_head}> Adicionar Server</Text>
+       </View>
+       <View style={styles.head_right}> 
+         <Image style={styles.img_right} source={lupa} />
+         <Image style={styles.img_right} source={opcao} />
+       </View>
+      </View>
 
-    <View style={styles.containerServ}>
-      <Image source={server} style={styles.iconserv}/>
-      <TouchableOpacity onPress={paginaAdd} style={styles.button}>
-          <Text style={styles.buttonText}>Add Server</Text>
-      </TouchableOpacity>
-    </View>
+      {/*Body */}
+      <View style={styles.view_body}>
 
-      
-    <View style={styles.containerServ}>
-      <Image source={server} style={styles.iconserv}/>
-      <TouchableOpacity onPress={paginaAtiva} style={styles.button}>
-        <Text style={styles.buttonText}>Armar alarme</Text>
-      </TouchableOpacity>
-    </View>
+        {/* Titulo */}
+        <View style={styles.view_titulo}>
 
-    <View style={styles.containerServ}>
-      <Image source={serverOff} style={styles.iconserv}/>
-      <TouchableOpacity onPress={paginaMain} style={styles.buttonOff}>
-        <Text style={styles.buttonText}> ---- </Text>
-      </TouchableOpacity>
-    </View>
+        </View>
 
-    <View style={styles.containerServ}>
-      <Image source={serverOff} style={styles.iconserv}/>
-      <TouchableOpacity onPress={paginaMain} style={styles.buttonOff}>
-        <Text style={styles.buttonText}> ---- </Text>
-      </TouchableOpacity>
-    </View>
-    
-    </View >
-      <View style={styles.foot}>
-    </View>
-  </KeyboardAvoidingView>
+        {/* Itens */}
+        <View style={styles.view_itens}>
+          
+        </View>
+
+      </View>
+      {/* Foot */}
+      <View style={styles.view_foot}>
+        
+      </View>
+
+    </KeyboardAvoidingView>
+
   );
 };
+
 
 const styles = StyleSheet.create({
 
   containerbackground: {
     flex: 1,
-    backgroundColor: "#F2F5F7",
-    justifyContent:'space-between',
+    backgroundColor: "#CC0000",
+    justifyContent: 'space-between',
   },
 
-  container: {
-    backgroundColor: "#F2F5F7",
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 30,
-  },
-
-  containerServ: {
+  container_head: {
     flexDirection: 'row',
-    backgroundColor: "#F2F5F7",
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: 'space-between' ,
+    height:'8%',
   },
 
-  button: {
-    height: 46,
-    alignSelf: 'stretch',
-    backgroundColor: "#6FCF97",
-    borderRadius: 4,
-    marginTop: 20,
-    justifyContent: 'center',
+  head_right:{
+    flexDirection: 'row',
     alignItems: 'center',
-    marginHorizontal: 10,
-    width: '80%',
+    padding: 10,
+  },
+  
+
+  head_left: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 10,
   },
 
-  buttonText: {
+  view_body:{
+
+  },
+
+  view_titulo:{
+
+  },
+
+  view_itens:{
+
+  },
+
+  view_foot: {
+
+  },
+
+
+  img_right: {
+    height: 20,
+    width: 20,
+    marginRight: 10,
+  },
+
+  text_head:{
     color: '#FFF',
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: 'normal',
+    marginLeft: 10,
   },
 
-  iconserv: {
-    alignSelf: 'stretch',
-    marginTop: 25,
+  img_left: {
+    height: 20,
+    width: 20,
+    marginTop: 5,
   },
 
-  buttonOff: {
-    height: 46,
-    alignSelf: 'stretch',
-    backgroundColor: "#E0E0E0",
-    borderRadius: 4,
-    marginTop: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginHorizontal: 10,
-    width: '80%',
-  },
-
-  foot: {
-    backgroundColor: "#003399",
-    height: "8%",
-  },
 });
