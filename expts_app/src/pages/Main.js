@@ -28,7 +28,8 @@ export default function Main({navigation}) {
         />
         <View style={styles.transparentView}>
           <View style={styles.logoViewStyle}>
-            <Text>cas</Text>
+            <Text>Teste01</Text>
+            <Text>Teste02</Text>
           </View>
         </View>
 
@@ -122,19 +123,21 @@ const styles = StyleSheet.create({
   },
 
   view_titulo:{
-
+    height:'10%',
   },
 
   view_itens:{
-    flex: 3,
+    flex: 1,
     flexDirection: 'row',
-    padding: 5,
+    flexWrap:'wrap',
+    justifyContent: 'space-between',
+    padding: 7,
   },   
 
   view_subitem: {
-    
     height: 120,
     width: 120,
+    marginTop: 7,
   },
 
   view_foot: {
@@ -164,9 +167,11 @@ const styles = StyleSheet.create({
 
   img_item: {
     flex: 1,
-    position: 'relative'
+    position: 'relative',
+    height: 120,
+    width: 120,
   },
-
+/*
   backgroundImage: {
     resizeMode: 'cover',
     flex: 1,
@@ -176,18 +181,18 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',  
   },
-
+*/
   transparentView: {
     flex: 1,
     backgroundColor: 'transparent',
     justifyContent: 'center',
-    position: 'absolute'
+    position: 'absolute',
   },
 
   logoViewStyle: {
     justifyContent: 'center',
     alignItems: 'center',
-    width: 250
+    width: 250,
   },
 
 });
