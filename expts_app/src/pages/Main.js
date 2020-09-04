@@ -11,11 +11,34 @@ import lupa from '../assets/lupa.png';
 import opcao from '../assets/opcao.png';
 //imagens menu
 import foto02 from '../assets/main/foto02.jpg';
+import foto03 from '../assets/main/foto03.jpg';
+import foto04 from '../assets/main/foto04.jpg';
+import foto05 from '../assets/main/foto05.jpg';
+import foto06 from '../assets/main/foto06.jpg';
+import foto07 from '../assets/main/foto07.jpg';
+import foto08 from '../assets/main/foto08.jpg';
+import foto09 from '../assets/main/foto09.jpg';
+import foto10 from '../assets/main/foto10.jpg';
 
 export default function Main({navigation}) {
   function handMain(){
    navigation.navigate('Login');
   }
+
+  //imagens menu de itens
+
+  const data = ['foto02', 'b', 'c', 'd' ];
+
+  let test = []
+  for(let i=0; i<data.length; i++){
+    test.push(
+    //<Text>{data[0]}</Text>
+    <Image source={foto02}/>
+    //<Image source={data[0]}/>
+    //<Image source={{data[0]}}/>
+    )
+  }
+
 
   let rows = []
   for(let i=0; i<9; i++){
@@ -27,9 +50,9 @@ export default function Main({navigation}) {
           style={styles.img_item}
         />
         <View style={styles.transparentView}>
-          <View style={styles.logoViewStyle}>
-            <Text>Teste01</Text>
-            <Text>Teste02</Text>
+          <View style={styles.textViewStyle}>
+            <Text style={styles.textItem}>ALARME</Text>
+            <Text style={styles.subtextItem}>17 CENAS</Text>
           </View>
         </View>
 
@@ -73,6 +96,7 @@ export default function Main({navigation}) {
           style={styles.view_itens}
         >
           {rows}
+          {test}
         </View>
 
       </View>
@@ -138,6 +162,7 @@ const styles = StyleSheet.create({
     height: 120,
     width: 120,
     marginTop: 7,
+    backgroundColor: '#000',
   },
 
   view_foot: {
@@ -170,6 +195,7 @@ const styles = StyleSheet.create({
     position: 'relative',
     height: 120,
     width: 120,
+    opacity: 0.6,
   },
 /*
   backgroundImage: {
@@ -183,16 +209,29 @@ const styles = StyleSheet.create({
   },
 */
   transparentView: {
-    flex: 1,
     backgroundColor: 'transparent',
-    justifyContent: 'center',
     position: 'absolute',
   },
 
-  logoViewStyle: {
-    justifyContent: 'center',
+  textViewStyle: {
+    height: 120,
+    width: 120,
     alignItems: 'center',
-    width: 250,
+    justifyContent: 'flex-end',
+  },
+
+  textItem:{
+    color: '#FFF',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+ 
+  subtextItem:{
+    color: '#FFF',
+    fontSize: 14,
+    fontWeight: 'normal',
+    marginTop: 20,
+    marginBottom: 15,
   },
 
 });
