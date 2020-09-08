@@ -22,12 +22,13 @@ import foto10 from '../assets/main/foto10.jpg';
 
 export default function Main({navigation}) {
   function handMain(){
-   navigation.navigate('Login');
+   navigation.navigate('Ativaalarm');
   }
 
   //imagens menu de itens
 
   const data = ['foto02', 'b', 'c', 'd' ];
+  const data2 = [{'nome': 25}, {'nome': 26}, {'nome': 27}, {'nome': 28}]
 
   let test = []
   for(let i=0; i<data.length; i++){
@@ -38,6 +39,8 @@ export default function Main({navigation}) {
     //<Image source={{data[0]}}/>
     )
   }
+
+  console.log(data2.map(x => x.nome));
 
 
   let rows = []

@@ -15,7 +15,7 @@ import soma from '../assets/soma.png';
 
 export default function Ativaalarm({navigation}) {
   function handMain(){
-    navigation.navigate('Main');
+    navigation.navigate('Addserver');
    }
  
    return (
