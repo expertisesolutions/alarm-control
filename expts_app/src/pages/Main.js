@@ -25,6 +25,10 @@ export default function Main({navigation}) {
    navigation.navigate('Ativaalarm');
   }
 
+  function Mainnext(){
+    navigation.navigate('Mainnext');
+   }
+   
   //imagens menu de itens
 
 
@@ -242,7 +246,7 @@ export default function Main({navigation}) {
           <Text style={styles.textFoot}>0 Informações</Text>
         <View style={styles.viewTrasparentFoot}>
           <View style={styles.viewtextFootNext}>
-            <TouchableOpacity onPress={handMain}>
+            <TouchableOpacity onPress={Mainnext}>
              <Text style={styles.textFootNext}>NEXT</Text>
             </TouchableOpacity>
           </View>
