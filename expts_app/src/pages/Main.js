@@ -95,7 +95,7 @@ export default function Main({navigation}) {
 
         {/* Titulo */}
         <View style={styles.view_titulo}>
-          <Text>MENU GERAL</Text>
+          <Text style={styles.text_titulo}>MENU GERAL</Text>
         </View>
 
         {/* Itens 
@@ -238,9 +238,15 @@ export default function Main({navigation}) {
       </View>
 
       {/* Foot */}
-      <View style={styles.view_foot}>
-        <Text>0 Informações</Text>
-        <View><Text>NEXT</Text></View>
+      <View style={styles.viewFoot}>
+        <View style={styles.viewTextFoot}>
+          <Text style={styles.textFoot}>0 Informações</Text>
+        </View>
+        <View style={styles.viewTrasparentFoot}>
+          <View style={styles.viewtextFootNext}>
+            <Text style={styles.textFootNext}>NEXT</Text>
+          </View>
+        </View>
       </View>
 
     </KeyboardAvoidingView>
@@ -284,6 +290,8 @@ const styles = StyleSheet.create({
 
   view_titulo:{
     height:'10%',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 
   view_itens:{
@@ -294,16 +302,48 @@ const styles = StyleSheet.create({
     padding: 7,
   },   
 
+  viewFoot: {
+    flex: 1,
+    backgroundColor: "#3A3B3C",
+    height: "7%",
+  },
+
+  viewTextFoot:{
+    flex: 1,
+    justifyContent:'center',
+    alignItems: 'center',
+  },
+
+  viewTrasparentFoot:{
+    backgroundColor: 'transparent',
+    position: 'absolute',
+    alignItems: 'flex-end',
+  },
+
+  viewtextFootNext:{
+    width: 120,
+    justifyContent:'center',
+    alignItems: 'center',
+  },
+
   view_subitem: {
     height: 120,
     width: 120,
     marginTop: 7,
     backgroundColor: '#000',
   },
+  
+  transparentView: {
+    backgroundColor: 'transparent',
+    position: 'absolute',
+  },
 
-  view_foot: {
-    backgroundColor: "#3A3B3C",
-    height: "7%",
+
+  textViewStyle: {
+    height: 120,
+    width: 120,
+    alignItems: 'center',
+    justifyContent: 'flex-end',
   },
 
 
@@ -344,17 +384,6 @@ const styles = StyleSheet.create({
     height: '100%',  
   },
 */
-  transparentView: {
-    backgroundColor: 'transparent',
-    position: 'absolute',
-  },
-
-  textViewStyle: {
-    height: 120,
-    width: 120,
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-  },
 
   textItem:{
     color: '#FFF',
@@ -368,6 +397,24 @@ const styles = StyleSheet.create({
     fontWeight: 'normal',
     marginTop: 20,
     marginBottom: 15,
+  },
+
+  text_titulo:{
+    color: '#FFF',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+
+  textFoot:{
+    color: '#FFF',
+    fontSize: 16,
+    fontWeight: 'normal',
+  },
+  
+  textFootNext:{
+    color: '#FFF',
+    fontSize: 16,
+    fontWeight: 'bold',
   },
 
 });
