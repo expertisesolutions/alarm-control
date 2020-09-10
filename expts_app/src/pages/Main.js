@@ -239,12 +239,12 @@ export default function Main({navigation}) {
 
       {/* Foot */}
       <View style={styles.viewFoot}>
-        <View style={styles.viewTextFoot}>
           <Text style={styles.textFoot}>0 Informações</Text>
-        </View>
         <View style={styles.viewTrasparentFoot}>
           <View style={styles.viewtextFootNext}>
-            <Text style={styles.textFootNext}>NEXT</Text>
+            <TouchableOpacity onPress={handMain}>
+             <Text style={styles.textFootNext}>NEXT</Text>
+            </TouchableOpacity>
           </View>
         </View>
       </View>
@@ -254,6 +254,8 @@ export default function Main({navigation}) {
   );
 };
 
+
+//<View style={styles.viewTextFoot}></View>
 
 const styles = StyleSheet.create({
 
@@ -306,24 +308,21 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#3A3B3C",
     height: "7%",
-  },
-
-  viewTextFoot:{
-    flex: 1,
     justifyContent:'center',
     alignItems: 'center',
   },
+
 
   viewTrasparentFoot:{
     backgroundColor: 'transparent',
     position: 'absolute',
-    alignItems: 'flex-end',
+    //alignSelf: 'stretch',
   },
 
   viewtextFootNext:{
-    width: 120,
-    justifyContent:'center',
-    alignItems: 'center',
+    width: 350,  // Resolver este problema 
+    justifyContent:'flex-end',
+    alignItems: 'flex-end',
   },
 
   view_subitem: {
