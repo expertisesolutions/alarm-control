@@ -27,20 +27,22 @@ export default function Main({navigation}) {
 
   //imagens menu de itens
 
+
+  /*
   const data = ['foto02', 'b', 'c', 'd' ];
-  const data2 = [{'nome': 25}, {'nome': 26}, {'nome': 27}, {'nome': 28}]
+  const data2 = [{'nome': foto02}, {'nome': 26}, {'nome': 27}, {'nome': 28}]
 
   let test = []
-  for(let i=0; i<data.length; i++){
+  for(let i=0; i<data2.length; i++){
     test.push(
     //<Text>{data[0]}</Text>
     <Image source={foto02}/>
-    //<Image source={data[0]}/>
-    //<Image source={{data[0]}}/>
     )
   }
 
   console.log(data2.map(x => x.nome));
+*/
+
 
 
   let rows = []
@@ -49,7 +51,7 @@ export default function Main({navigation}) {
       <View style={styles.view_subitem}>
         <Image
           key={foto02}
-          source={foto02}
+          source={foto03}
           style={styles.img_item}
         />
         <View style={styles.transparentView}>
@@ -62,6 +64,8 @@ export default function Main({navigation}) {
       </View>
     )
   }
+
+  
 
   return (
     <KeyboardAvoidingView 
@@ -94,12 +98,141 @@ export default function Main({navigation}) {
           <Text>MENU GERAL</Text>
         </View>
 
-        {/* Itens */}
-        <View 
-          style={styles.view_itens}
-        >
+        {/* Itens 
+        <View style={styles.view_itens}>
           {rows}
-          {test}
+        </View>
+        */}
+
+        {/* Itens */}
+        <View style={styles.view_itens}>
+          
+          <View style={styles.view_subitem}>
+          <Image
+            key={foto02}
+            source={foto02}
+            style={styles.img_item}
+          />
+          <View style={styles.transparentView}>
+            <View style={styles.textViewStyle}>
+              <Text style={styles.textItem}>ALARME</Text>
+              <Text style={styles.subtextItem}>17 CENAS</Text>
+            </View>
+          </View>
+         </View>
+
+         <View style={styles.view_subitem}>
+          <Image
+            key={foto10}
+            source={foto10}
+            style={styles.img_item}
+          />
+          <View style={styles.transparentView}>
+            <View style={styles.textViewStyle}>
+              <Text style={styles.textItem}>ILUMINAÇÃO</Text>
+              <Text style={styles.subtextItem}>09 CENAS</Text>
+            </View>
+          </View>
+         </View>
+
+         <View style={styles.view_subitem}>
+          <Image
+            key={foto03}
+            source={foto03}
+            style={styles.img_item}
+          />
+          <View style={styles.transparentView}>
+            <View style={styles.textViewStyle}>
+              <Text style={styles.textItem}>CLIMA</Text>
+              <Text style={styles.subtextItem}>17 CENAS</Text>
+            </View>
+          </View>
+         </View>
+
+         <View style={styles.view_subitem}>
+          <Image
+            key={foto04}
+            source={foto04}
+            style={styles.img_item}
+          />
+          <View style={styles.transparentView}>
+            <View style={styles.textViewStyle}>
+              <Text style={styles.textItem}>CAFÉ</Text>
+              <Text style={styles.subtextItem}>03 CENAS</Text>
+            </View>
+          </View>
+         </View>
+
+         <View style={styles.view_subitem}>
+          <Image
+            key={foto05}
+            source={foto05}
+            style={styles.img_item}
+          />
+          <View style={styles.transparentView}>
+            <View style={styles.textViewStyle}>
+              <Text style={styles.textItem}>FECHADURAS</Text>
+              <Text style={styles.subtextItem}>08 CENAS</Text>
+            </View>
+          </View>
+         </View>
+
+         <View style={styles.view_subitem}>
+          <Image
+            key={foto06}
+            source={foto06}
+            style={styles.img_item}
+          />
+          <View style={styles.transparentView}>
+            <View style={styles.textViewStyle}>
+              <Text style={styles.textItem}>MIDIA</Text>
+              <Text style={styles.subtextItem}>05 CENAS</Text>
+            </View>
+          </View>
+         </View>
+
+         <View style={styles.view_subitem}>
+          <Image
+            key={foto07}
+            source={foto07}
+            style={styles.img_item}
+          />
+          <View style={styles.transparentView}>
+            <View style={styles.textViewStyle}>
+              <Text style={styles.textItem}>PET</Text>
+              <Text style={styles.subtextItem}>02 CENAS</Text>
+            </View>
+          </View>
+         </View>
+
+         <View style={styles.view_subitem}>
+          <Image
+            key={foto08}
+            source={foto08}
+            style={styles.img_item}
+          />
+          <View style={styles.transparentView}>
+            <View style={styles.textViewStyle}>
+              <Text style={styles.textItem}>JARDIM</Text>
+              <Text style={styles.subtextItem}>03 CENAS</Text>
+            </View>
+          </View>
+         </View>
+
+         <View style={styles.view_subitem}>
+          <Image
+            key={foto09}
+            source={foto09}
+            style={styles.img_item}
+          />
+          <View style={styles.transparentView}>
+            <View style={styles.textViewStyle}>
+              <Text style={styles.textItem}>SERVIÇÕS</Text>
+              <Text style={styles.subtextItem}>10 CENAS</Text>
+            </View>
+          </View>
+         </View>
+
         </View>
 
       </View>
