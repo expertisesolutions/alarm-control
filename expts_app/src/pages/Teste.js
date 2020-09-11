@@ -3,33 +3,9 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  TouchableOpacity,
 } from 'react-native';
-
-import lupa from '../assets/lupa.png';
-
-import Icon from 'react-native-vector-icons/FontAwesome';
-import {Drawer, Container, Header, Content,Button } from 'native-base';
-
-
-
-class SideBar extends Component {
-    
-    
-  render(){
-      
-      return (
-              <View style={[ styles.container, { backgroundColor: '#fff' } ]}>
-                      <Text>
-                          <Icon name="rocket" size={30} color="#900" />
-                          Conteúdo side bar
-                      </Text>
-              </View>
-             );
-  } 
-};
-
-
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,' +
@@ -39,36 +15,20 @@ const instructions = Platform.select({
 });
 
 
-
-  
 export default function Login({navigation}) {
    
 
     return (
-      <Drawer>
-        <Container>
-        <Header>
-            <Container style={{flexDirection: 'row'}}>
-              <Text>dcadfad</Text>
-            </Container>
-        </Header>
-          
           <View style={styles.container}>
-            <Text style={styles.welcome}>
-              Welcome to React Native!
-            </Text>
-            <Text style={styles.instructions}>
-              To get started, edit App.js
-            </Text>
             <Text style={styles.instructions}>
               dasdasd
             </Text>
           </View>
-         
-        </Container>
-      </Drawer>
     );
   };
+
+
+  
   
 const styles = StyleSheet.create({
     container: {
@@ -87,4 +47,27 @@ const styles = StyleSheet.create({
       color: '#333333',
       marginBottom: 5,
     },
+
+
+    button: {
+      height: 46,
+      alignSelf: 'stretch',
+      backgroundColor: "#003399",
+      borderRadius: 4,
+      marginTop: 20,
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginHorizontal: 10,
+    },
+  
+    buttonText: {
+      color: '#FFF',
+      fontSize: 16,
+      fontWeight: 'bold',
+    },
+
+
+
+
+
 });

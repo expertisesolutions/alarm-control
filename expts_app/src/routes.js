@@ -21,7 +21,6 @@ const Routes = createAppContainer(
     Addserver,
     Ativaalarm,
     Mainnext,
-    
   })
 );
 
