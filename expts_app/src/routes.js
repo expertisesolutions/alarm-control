@@ -1,6 +1,6 @@
 import {createAppContainer} from 'react-navigation';
 import {createSwitchNavigator} from 'react-navigation';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createDrawerNavigator } from 'react-navigation-drawer';
 
 import Register from './pages/register';
 import Login from './pages/Login'
@@ -13,7 +13,7 @@ import Mainnext from './pages/Mainnext'
 import Teste from './pages/Teste'
 
 const Routes = createAppContainer(
-  createSwitchNavigator({
+  createDrawerNavigator({
     Teste,
     Login,
     Main,
@@ -22,7 +22,7 @@ const Routes = createAppContainer(
     Addserver,
     Ativaalarm,
     Mainnext,
-  })
+  }, )
 );
 
 export default Routes;
