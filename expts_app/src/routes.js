@@ -1,5 +1,6 @@
 import {createAppContainer} from 'react-navigation';
 import {createSwitchNavigator} from 'react-navigation';
+import {createDrawerNavigator } from 'react-navigation-drawer';
 
 import Register from './pages/register';
 import Login from './pages/Login'
