@@ -1151,6 +1151,14 @@
     query-string "^6.11.1"
     react-is "^16.13.0"
 
+"@react-navigation/drawer@^5.9.0":
+  version "5.9.0"
+  resolved "https://registry.yarnpkg.com/@react-navigation/drawer/-/drawer-5.9.0.tgz#e8813df2f1aa5694521c1a46c88d0b42c50fbe6c"
+  integrity sha512-YcuJ9QD4cFyjfXJx6vMsG3u3bfOU/Nt+GvMMl+4rZOxw2LStmubY1jqfsEAli/+dTUHv5kXJf5dF+/GhUCqA5g==
+  dependencies:
+    color "^3.1.2"
+    react-native-iphone-x-helper "^1.2.1"
+
 "@react-navigation/native@^3.8.0":
   version "3.8.0"
   resolved "https://registry.yarnpkg.com/@react-navigation/native/-/native-3.8.0.tgz#35882c3fc2f997ea1a43c12a15088cf4c818fd92"
@@ -2105,7 +2113,7 @@ color-support@^1.1.3:
   resolved "https://registry.yarnpkg.com/color-support/-/color-support-1.1.3.tgz#93834379a1cc9a0c61f82f52f0d04322251bd5a2"
   integrity sha512-qiBjkpbMLO/HL68y+lh4q0/O1MZFj2RX6X/KmMa3+gJD3z+WwI1ZzDHysvqHGS3mP6mznPckpXmw1nI9cJjyRg==
 
-color@~3.1.2:
+color@^3.1.2, color@~3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/color/-/color-3.1.2.tgz#68148e7f85d41ad7649c5fa8c8106f098d229e10"
   integrity sha512-vXTJhHebByxZn3lDvDJYw4lR5+uB3vuoHsuYA5AKuxRVn5wzzIfQKGLBmgdVRHKTJYeK5rvJcHnrd0Li49CFpg==
@@ -2312,6 +2320,11 @@ dayjs@^1.8.15:
   version "1.8.33"
   resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.8.33.tgz#18bc4a2b6c1c6f4d67b4c4f2536c0b97e5b766f7"
   integrity sha512-881TDLZCdpJFKbraWRHcUG8zfMLLX400ENf9rFZDuWc5zYMss6xifo2PhlDX0ftOmR2NRmaIY47bAa4gKQfXqw==
+
+debounce@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/debounce/-/debounce-1.2.0.tgz#44a540abc0ea9943018dc0eaa95cce87f65cd131"
+  integrity sha512-mYtLl1xfZLi1m4RtQYlZgJUNQjl4ZxVnHzIR8nLLgi4q1YT8o/WM+MK/f8yfcc9s5Ir5zRaPZyZU6xs1Syoocg==
 
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3:
   version "2.6.9"
@@ -5758,7 +5771,7 @@ react-native-gesture-handler@^1.8.0:
     invariant "^2.2.4"
     prop-types "^15.7.2"
 
-react-native-iphone-x-helper@^1.0.3:
+react-native-iphone-x-helper@^1.0.3, react-native-iphone-x-helper@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.2.1.tgz#645e2ffbbb49e80844bb4cbbe34a126fda1e6772"
   integrity sha512-/VbpIEp8tSNNHIvstuA3Swx610whci1Zpc9mqNkqn14DkMbw+ORviln2u0XyHG1kPvvwTNGZY6QpeFwxYaSdbQ==
@@ -5776,6 +5789,13 @@ react-native-safe-area-view@^0.14.9:
   integrity sha512-WII/ulhpVyL/qbYb7vydq7dJAfZRBcEhg4/UWt6F6nAKpLa3gAceMOxBxI914ppwSP/TdUsandFy6lkJQE0z4A==
   dependencies:
     hoist-non-react-statics "^2.3.1"
+
+react-native-screens@^1.0.0-alpha.23:
+  version "1.0.0-alpha.23"
+  resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-1.0.0-alpha.23.tgz#25d7ea4d11bda4fcde2d1da7ae50271c6aa636e0"
+  integrity sha512-tOxHGQUN83MTmQB4ghoQkibqOdGiX4JQEmeyEv96MKWO/x8T2PJv84ECUos9hD3blPRQwVwSpAid1PPPhrVEaw==
+  dependencies:
+    debounce "^1.2.0"
 
 react-native-vector-icons@^7.0.0:
   version "7.1.0"
