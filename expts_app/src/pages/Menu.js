@@ -3,6 +3,10 @@
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
+ * 
+ * https://github.com/proshoumma/react-native-off-canvas-menu
+ * http://davifelipe.com.br/react-native-side-menu-menu-lateral
+ * 
  * @flow
  */
 import React, { Component } from 'react';
@@ -12,6 +16,7 @@ import {
   Text,
   View
 } from 'react-native';
+
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {Drawer, Container, Header, Content,Button } from 'native-base';
 

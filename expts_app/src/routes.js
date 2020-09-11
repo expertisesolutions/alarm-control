@@ -8,10 +8,12 @@ import Test from './pages/Test'
 import Addserver  from './pages/Addserver'
 import Ativaalarm from './pages/Armaralarm'
 import Mainnext from './pages/Mainnext'
-import Menu from './pages/Menu'
+//import Menu from './pages/Menu'
+import Teste from './pages/Teste'
 
 const Routes = createAppContainer(
   createSwitchNavigator({
+    Teste,
     Login,
     Main,
     Register,
@@ -19,7 +21,7 @@ const Routes = createAppContainer(
     Addserver,
     Ativaalarm,
     Mainnext,
-    Menu,
+    
   })
 );
 
