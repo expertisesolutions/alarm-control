@@ -26,7 +26,7 @@ export default function Main({navigation}) {
   }
 
   function Main(){
-    navigation.navigate('Teste');
+    navigation.navigate('Main');
    }
 
   return (

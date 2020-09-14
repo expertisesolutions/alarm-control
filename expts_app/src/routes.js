@@ -9,12 +9,9 @@ import Test from './pages/Test'
 import Addserver  from './pages/Addserver'
 import Ativaalarm from './pages/Armaralarm'
 import Mainnext from './pages/Mainnext'
-//import Menu from './pages/Menu'
-import Teste from './pages/Teste'
 
-const Routes = createAppContainer(
-  createDrawerNavigator({
-    Teste,
+
+const Routes = createSwitchNavigator({
     Login,
     Main,
     Register,
@@ -22,7 +19,13 @@ const Routes = createAppContainer(
     Addserver,
     Ativaalarm,
     Mainnext,
-  }, )
-);
+  });
 
-export default Routes;
+const Menudrawer = createDrawerNavigator({
+    Login: {
+      screen: Routes,
+    },
+  });
+
+export default createAppContainer(Menudrawer);
+

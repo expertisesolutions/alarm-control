@@ -10,14 +10,12 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@react-navigation/drawer": "^5.9.0",
     "formik": "^2.1.5",
-    "native-base": "^2.13.14",
     "react": "16.13.1",
     "react-native": "0.63.2",
     "react-native-gesture-handler": "^1.8.0",
     "react-native-reanimated": "^1.13.0",
-    "react-native-screens": "^1.0.0-alpha.23",
+    "react-native-screens": "^2.10.1",
     "react-navigation": "^4.4.0",
     "react-navigation-drawer": "^2.5.0"
   },
