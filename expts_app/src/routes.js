@@ -9,6 +9,7 @@ import Test from './pages/Test'
 import Addserver from './pages/Addserver'
 import Ativaalarm from './pages/Armaralarm'
 import Mainnext from './pages/Mainnext'
+import CustonDrwer from './pages/CustonDrwer'
 
 
 const Auth = createSwitchNavigator({
@@ -38,6 +39,9 @@ const Menudrawer = createDrawerNavigator({
   Mainnext:{
     screen: Mainnext,
   },
+  
+},{
+  contentComponent: CustonDrwer
 });
 
 const Routes = createSwitchNavigator({
