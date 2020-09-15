@@ -14,6 +14,10 @@ export default function Login({navigation}) {
       navigation.navigate('Main');
      }
 
+     function Registrar(){
+      navigation.navigate('Sendcode');
+     }
+
   return (
     <KeyboardAvoidingView 
       behavior="padding"
@@ -40,11 +44,16 @@ export default function Login({navigation}) {
         <TouchableOpacity onPress={handloLogin} style={styles.button}>
           <Text style={styles.buttonText}>LOGIN</Text>
         </TouchableOpacity>
+        <TouchableOpacity onPress={Registrar} style={styles.registro}>
+          <View style={styles.view_foot}>
+            <Text style={styles.foottext}>Não possui acesso ? <Text style={styles.foottextBold}>Solicitar</Text></Text>
+          </View>
+        </TouchableOpacity>
       </View >
       <View style={styles.foot}>
       </View>
     </KeyboardAvoidingView>
-  );
+  )
 };
 
 const styles = StyleSheet.create({
@@ -102,6 +111,23 @@ const styles = StyleSheet.create({
     height: 20,
     left: 0,
     top: 175,
+  },
+
+  registro:{
+
+  },
+
+  view_foot: {
+    marginTop: 40,
+    //justifyContent: 'center',
+    alignItems: 'center',
+    height: 46,
+  },
+
+  foottext: {
+    color: '#000',
+    fontSize: 16,
+    fontWeight: 'normal',
   },
 
 
