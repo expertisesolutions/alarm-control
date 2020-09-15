@@ -1,11 +1,60 @@
 import React from  'react'
-import {View, Text, Image } from 'react-native';
+import {
+  Text, View, StyleSheet, StatusBar, Image, TextInput,
+  TouchableOpacity 
+} from 'react-native';
+
 import { DrawerNavigationItems } from 'react-navigation-drawer';
+
+
+
+//media
+
+import Menu from '../assets/menu.png'
+
 
 export default function CustonDrawer({...props}){
   return(
-    <View>
-      <Text> Teste de Tela de Menu </Text>
+    <View style={styles.containerbackground}>
+      <View style={styles.viewHead}>
+        <Image source={Menu}/>
+        <Text> Titulo</Text>
+      </View>
+      <View style={styles.viewItens}>
+        <View style={styles.viewItem}>
+          <Image source={Menu}/>
+          <Text> Texto Item</Text>
+        </View>
+      </View>
+      
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+
+  containerbackground: {
+    flex: 1,
+    backgroundColor: "#C4C4C4",
+    justifyContent:'space-between',
+  },
+
+  viewItens:{
+  },
+
+  viewItem:{
+  },
+
+  iconHead:{
+  },
+
+  iconItem:{
+  },
+
+  textoHead:{
+  },
+
+  textoItem:{
+  },
+});
+
