@@ -53,7 +53,9 @@ export default function Main({navigation}) {
        </View>
        <View style={styles.head_right}> 
          <Image style={styles.img_right} source={lupa} />
-         <Image style={styles.img_right} source={opcao} />
+         <TouchableOpacity onPress={OpenMenu}>
+           <Image style={styles.img_right} source={opcao} />
+         </TouchableOpacity>
        </View>
       </View>
 
