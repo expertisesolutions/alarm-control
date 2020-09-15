@@ -5,7 +5,7 @@ import {
 } from 'react-native';
 
 //media
-import logo from '../assets/logo.png';
+import logo from '../../assets/logo.png';
 
 //const Login= ({ navigation }) =>  {
 

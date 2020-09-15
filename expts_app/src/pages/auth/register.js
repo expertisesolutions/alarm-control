@@ -5,8 +5,8 @@ import {
 } from 'react-native';
 
 //media
-import logo from '../assets/logo.png';
-import server from '../assets/server.png';
+import logo from '../../assets/logo.png'
+import server from '../../assets/server.png';
 
 export default function Register({navigation}) {
   function handloLogin(){

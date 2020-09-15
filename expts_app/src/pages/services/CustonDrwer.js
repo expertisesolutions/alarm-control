@@ -8,7 +8,7 @@ import {openDrawer} from 'react-navigation-drawer';
 
 //media
 
-import Menu from '../assets/menu.png'
+import Menu from '../../assets/menu.png'
 
 
 export default function CustonDrawer({...props}){
