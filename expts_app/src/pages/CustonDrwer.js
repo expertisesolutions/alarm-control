@@ -4,9 +4,7 @@ import {
   TouchableOpacity 
 } from 'react-native';
 
-import { DrawerNavigationItems } from 'react-navigation-drawer';
-
-
+import {openDrawer} from 'react-navigation-drawer';
 
 //media
 

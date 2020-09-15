@@ -5,7 +5,6 @@ import { createDrawerNavigator } from 'react-navigation-drawer';
 import Register from './pages/register';
 import Login from './pages/Login'
 import Main from './pages/Main'
-import Test from './pages/Test'
 import Addserver from './pages/Addserver'
 import Ativaalarm from './pages/Armaralarm'
 import Mainnext from './pages/Mainnext'
@@ -27,9 +26,7 @@ const Menudrawer = createDrawerNavigator({
   Register: {
     screen: Register,
   },
-  Test: {
-    screen: Test,
-  },
+  
   Addserver: {
     screen: Addserver,
   },

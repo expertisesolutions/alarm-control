@@ -16,7 +16,12 @@ import soma from '../assets/soma.png';
 export default function Ativaalarm({navigation}) {
   function handMain(){
     navigation.navigate('Addserver');
-   }
+  }
+
+  function OpenMenu(){
+    navigation.openDrawer();
+  }
+  
  
    return (
      <KeyboardAvoidingView 

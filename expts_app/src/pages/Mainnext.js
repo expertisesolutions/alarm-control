@@ -29,6 +29,11 @@ export default function Main({navigation}) {
     navigation.navigate('Main');
    }
 
+  function OpenMenu(){
+    navigation.openDrawer();
+  }
+  
+
   return (
     <KeyboardAvoidingView 
         behavior="padding"

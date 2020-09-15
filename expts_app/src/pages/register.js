@@ -13,6 +13,8 @@ export default function Register({navigation}) {
    navigation.navigate('Main');
   }
 
+  
+
   return (
   <KeyboardAvoidingView 
     behavior="padding"

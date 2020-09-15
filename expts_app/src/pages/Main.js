@@ -27,8 +27,12 @@ export default function Main({navigation}) {
 
   function Mainnext(){
     navigation.navigate('Mainnext');
-   }
+  }
    
+  function OpenMenu(){
+    navigation.openDrawer();
+  }
+  
   //imagens menu de itens
 
 
@@ -101,12 +105,6 @@ export default function Main({navigation}) {
         <View style={styles.view_titulo}>
           <Text style={styles.text_titulo}>MENU GERAL</Text>
         </View>
-
-        {/* Itens 
-        <View style={styles.view_itens}>
-          {rows}
-        </View>
-        */}
 
         {/* Itens */}
         <View style={styles.view_itens}>

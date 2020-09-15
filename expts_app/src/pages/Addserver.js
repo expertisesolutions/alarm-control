@@ -16,6 +16,11 @@ export default function Addserver({navigation}) {
    navigation.navigate('Main');
   }
 
+  function OpenMenu(){
+    navigation.openDrawer();
+  }
+  
+
   return (
     <KeyboardAvoidingView 
         behavior="padding"
