@@ -48,6 +48,13 @@ const Routes = createSwitchNavigator({
   Sendcode:{
     screen: Sendcode,
   },
+  Sendcodephone:{
+    screen: Sendcodephone,
+  },
+  Code:{
+    screen: Code,
+  }
+
 });
 
 export default createAppContainer(Routes);

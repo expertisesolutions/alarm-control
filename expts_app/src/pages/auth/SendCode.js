@@ -45,7 +45,7 @@ export default function Sendcodemail({navigation}){
           <Text style={styles.textTitulo}>Verifique seu E-mail</Text>
           <View style={styles.viewInstru}>
             <Text style={styles.textoInstru}>
-              Por favor, entre informe seu E-mail  abaixo, 
+              Por favor,informe seu E-mail no campo abaixo, 
               para que possamos enviar um codigo de verificação.
             </Text>
           </View>

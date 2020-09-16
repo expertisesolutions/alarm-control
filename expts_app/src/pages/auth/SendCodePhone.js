@@ -45,24 +45,33 @@ export default function Sendcodemail({navigation}){
           <Text style={styles.textTitulo}>Verifique seu E-mail</Text>
           <View style={styles.viewInstru}>
             <Text style={styles.textoInstru}>
-              Por favor, entre informe seu E-mail  abaixo, 
-              para que possamos enviar um codigo de verificação.
+              Por favor, informe seu telefone com código de área,
+              para que possamos enviar um código de verificação.
             </Text>
           </View>
-          <TextInput
-            autoCapitalize="none"
-            autoCorrect={false}
-            placeholder="seu_email@email.com.br"
-            placeholderTextColor="#999"
-            style={styles.imput}
-          />
+          <View style={styles.viewImput}> 
+            <Text style={styles.imputText}>+55</Text>
+            <TextInput
+              autoCapitalize="none"
+              autoCorrect={false}
+              placeholder="00"
+              placeholderTextColor="#999"
+              style={styles.imputDdd}
+            />
+            <Text style={styles.imputText}>-</Text>
+            <TextInput
+              autoCapitalize="none"
+              autoCorrect={false}
+              placeholder="99999-9999"
+              placeholderTextColor="#999"
+              style={styles.imputNumero}
+            />
+          </View>
           <TouchableOpacity onPress={Return} style={styles.button}>
             <Text style={styles.buttontext}>Continune</Text>
           </TouchableOpacity>
         </View>
       </View>
-      
-
 
     </KeyboardAvoidingView>
   )};
@@ -137,14 +146,13 @@ const styles = StyleSheet.create({
       fontWeight: 'normal',
     },
 
-    imput: {
-      height: 42,
+    viewImput:{
       alignSelf: 'stretch',
-      borderBottomColor: '#000',
-      borderBottomWidth: 1,
       marginTop: '12%',
-      marginHorizontal: 10,
-      paddingHorizontal: 2,
+      flexDirection: 'row',
+      justifyContent: 'space-evenly' ,
+      alignItems:'center',
+      height: 42,
     },
 
     button: {
@@ -163,5 +171,28 @@ const styles = StyleSheet.create({
       fontWeight: 'bold',
     },
 
+    imputText: {
+      color: '#000',
+      fontSize: 16,
+      fontWeight: 'normal',
+    },
+
+    imputDdd: {
+      fontSize: 16,
+      height: 42,
+      borderBottomColor: '#000',
+      borderBottomWidth: 1,
+      //marginHorizontal: 10,
+      //paddingHorizontal: 2,
+    },
+
+    imputNumero: {
+      fontSize: 16,
+      height: 42,
+      borderBottomColor: '#000',
+      borderBottomWidth: 1,
+      //marginHorizontal: 10,
+      //paddingHorizontal: 2,
+    },
   });
 
