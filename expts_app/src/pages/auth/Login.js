@@ -15,7 +15,7 @@ export default function Login({navigation}) {
      }
 
      function Registrar(){
-      navigation.navigate('Sendcodephone');
+      navigation.navigate('Code');
      }
 
   return (
