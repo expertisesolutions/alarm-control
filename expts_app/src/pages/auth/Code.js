@@ -14,6 +14,16 @@ export default function Sendcodemail({navigation}){
     navigation.navigate('Login');
   }
 
+  function getInitialState() {
+    return { style: styles.textinput_unfocused }
+  }
+  function onFocuss() {
+    setState({ style: styles.textinput_focused })
+  }
+  function onBlurr() {
+    setState({ style: styles.imputNumero })
+  }
+
   return(
     <KeyboardAvoidingView 
       behavior="padding"
@@ -57,7 +67,11 @@ export default function Sendcodemail({navigation}){
             <TextInput
               autoCapitalize="none"
               autoCorrect={false}
-              style={styles.imputNumero}
+              style={styles.state.style}
+              onBlur={onBlurr}
+              onFocus={ onFocuss }
+
+              
             />
             <TextInput
               autoCapitalize="none"
@@ -190,6 +204,10 @@ const styles = StyleSheet.create({
       borderBottomColor: '#000',
       borderBottomWidth: 1,
       marginLeft: 18,
+    },
+     
+    textinput_focused: {
+      backgroundColor: '#F543'
     },
   });
 
