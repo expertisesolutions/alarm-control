@@ -102,32 +102,32 @@ const styles = StyleSheet.create({
     },
 
     containerLogo: {
-     // justifyContent: 'flex-start',
+      justifyContent: 'flex-end',
       alignItems: 'center',
-      height: '30%',
+      height: '32%',
       padding: 30,
     },
 
     viewbody: {
       padding: '14%',
       alignItems: 'center',
-      height: '63%',
+      height: '53%',
     },
     
     imgLogo: {
       height: 37,
       width: 37,
-      marginVertical: 60,
     },
 
     textTitulo: {
       color: '#003399',
       fontSize: 16,
       fontWeight: 'bold',
+      marginTop: '5%',
     },
 
     viewInstru:{
-      marginTop: 20,
+      marginTop: '5%',
     },
 
     textoInstru:{
@@ -142,13 +142,13 @@ const styles = StyleSheet.create({
       alignSelf: 'stretch',
       borderBottomColor: '#000',
       borderBottomWidth: 1,
-      marginTop: 40,
+      marginTop: '12%',
       marginHorizontal: 10,
       paddingHorizontal: 2,
     },
 
     button: {
-      marginTop: 40,
+      marginTop: '12%',
       height: 42,
       backgroundColor: '#003399',
       alignSelf: 'stretch',
