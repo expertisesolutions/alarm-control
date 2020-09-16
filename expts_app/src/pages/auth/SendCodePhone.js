@@ -42,7 +42,7 @@ export default function Sendcodemail({navigation}){
         </View>
         {/* body  */}
         <View style={styles.viewbody}>
-          <Text style={styles.textTitulo}>Verifique seu E-mail</Text>
+          <Text style={styles.textTitulo}>Verifique seu Telefone</Text>
           <View style={styles.viewInstru}>
             <Text style={styles.textoInstru}>
               Por favor, informe seu telefone com código de área,
@@ -50,20 +50,15 @@ export default function Sendcodemail({navigation}){
             </Text>
           </View>
           <View style={styles.viewImput}> 
-            <Text style={styles.imputText}>+55</Text>
             <TextInput
               autoCapitalize="none"
               autoCorrect={false}
-              placeholder="00"
-              placeholderTextColor="#999"
               style={styles.imputDdd}
+              onFocus="1"
             />
-            <Text style={styles.imputText}>-</Text>
             <TextInput
               autoCapitalize="none"
               autoCorrect={false}
-              placeholder="99999-9999"
-              placeholderTextColor="#999"
               style={styles.imputNumero}
             />
           </View>
@@ -171,28 +166,21 @@ const styles = StyleSheet.create({
       fontWeight: 'bold',
     },
 
-    imputText: {
-      color: '#000',
-      fontSize: 16,
-      fontWeight: 'normal',
-    },
-
     imputDdd: {
       fontSize: 16,
       height: 42,
+      width: '16%',
       borderBottomColor: '#000',
       borderBottomWidth: 1,
-      //marginHorizontal: 10,
-      //paddingHorizontal: 2,
     },
 
     imputNumero: {
       fontSize: 16,
       height: 42,
+      width: '80%',
       borderBottomColor: '#000',
       borderBottomWidth: 1,
-      //marginHorizontal: 10,
-      //paddingHorizontal: 2,
+      marginLeft: 18,
     },
   });
 
