@@ -194,6 +194,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginHorizontal: 10,
+    zIndex: 99,
   },
 
   buttontext: {

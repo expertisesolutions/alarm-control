@@ -53,5 +53,5 @@ const Routes = createSwitchNavigator({
 export default createAppContainer(Routes);
 
 // Rotas: {
-// screen: Routes,
+// screen: Routes, f
 // },

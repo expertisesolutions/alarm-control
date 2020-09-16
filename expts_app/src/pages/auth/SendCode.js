@@ -1,7 +1,7 @@
 import React from  'react';
 import {
   View, Text, TouchableOpacity, KeyboardAvoidingView, StyleSheet, 
-  StatusBar, Image
+  StatusBar, Image, TextInput
 } from  'react-native';
 
 //media
@@ -41,8 +41,24 @@ export default function Sendcodemail({navigation}){
           <Image  style={styles.imgLogo} source={Logo} />
         </View>
         {/* body  */}
-        <View>
-          
+        <View style={styles.viewbody}>
+          <Text style={styles.textTitulo}>Verifique seu E-mail</Text>
+          <View style={styles.viewInstru}>
+            <Text style={styles.textoInstru}>
+              Por favor, entre informe seu E-mail  abaixo, 
+              para que possamos enviar um codigo de verificação.
+            </Text>
+          </View>
+          <TextInput
+            autoCapitalize="none"
+            autoCorrect={false}
+            placeholder="seu_email@email.com.br"
+            placeholderTextColor="#999"
+            style={styles.imput}
+          />
+          <TouchableOpacity onPress={Return} style={styles.button}>
+            <Text style={styles.buttontext}>Continune</Text>
+          </TouchableOpacity>
         </View>
       </View>
       
@@ -86,15 +102,66 @@ const styles = StyleSheet.create({
     },
 
     containerLogo: {
-      justifyContent: 'center',
+     // justifyContent: 'flex-start',
       alignItems: 'center',
       height: '30%',
       padding: 30,
+    },
+
+    viewbody: {
+      padding: '14%',
+      alignItems: 'center',
+      height: '63%',
     },
     
     imgLogo: {
       height: 37,
       width: 37,
+      marginVertical: 60,
     },
+
+    textTitulo: {
+      color: '#003399',
+      fontSize: 16,
+      fontWeight: 'bold',
+    },
+
+    viewInstru:{
+      marginTop: 20,
+    },
+
+    textoInstru:{
+      textAlign: 'center',
+      color: '#878585',
+      fontSize: 14,
+      fontWeight: 'normal',
+    },
+
+    imput: {
+      height: 42,
+      alignSelf: 'stretch',
+      borderBottomColor: '#000',
+      borderBottomWidth: 1,
+      marginTop: 40,
+      marginHorizontal: 10,
+      paddingHorizontal: 2,
+    },
+
+    button: {
+      marginTop: 40,
+      height: 42,
+      backgroundColor: '#003399',
+      alignSelf: 'stretch',
+      alignItems: 'center',
+      justifyContent: 'center',
+      borderRadius: 50,
+    },
+
+    buttontext: {
+      color: '#FFF',
+      fontSize: 16,
+      fontWeight: 'bold',
+    },
+
   });
 
