@@ -1,7 +1,7 @@
 import React from 'react';
 import { 
-  Text, View, StyleSheet, StatusBar, Image, TextInput,
-  TouchableOpacity, KeyboardAvoidingView, Platform
+  Text, View, StyleSheet, StatusBar, Image,TouchableOpacity,
+  KeyboardAvoidingView, Platform
 } from 'react-native';
 
 //media
@@ -9,13 +9,38 @@ import logo from '../assets/logo.png';
 
 //const Login= ({ navigation }) =>  {
 
-export default function Login({navigation}) {
+export default function Telas({navigation}) {
      function handloLogin(){
+      navigation.navigate('Login');
+     }
+
+     function SendCode(){
+      navigation.navigate('Sendcode');
+     }
+
+     function SendCodePhone(){
+      navigation.navigate('Sendcodephone');
+     }
+
+     function Code(){
+      navigation.navigate('Code');
+     }
+
+     function Main(){
       navigation.navigate('Main');
      }
 
+
+     function AddServer(){
+      navigation.navigate('Addserver');
+     }
+
+     function AtivarAlarme(){
+      navigation.navigate('Ativaalarm');
+     }
+
      function Registrar(){
-      navigation.navigate('Code');
+      navigation.navigate('Register');
      }
 
   return (
@@ -32,22 +57,22 @@ export default function Login({navigation}) {
         <TouchableOpacity onPress={handloLogin} style={styles.button}>
           <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={handloLogin} style={styles.button}>
+        <TouchableOpacity onPress={SendCode} style={styles.button}>
           <Text style={styles.buttonText}>SendEmail</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={handloLogin} style={styles.button}>
+        <TouchableOpacity onPress={SendCodePhone} style={styles.button}>
           <Text style={styles.buttonText}>Send CodePhone</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={handloLogin} style={styles.button}>
+        <TouchableOpacity onPress={Code} style={styles.button}>
           <Text style={styles.buttonText}>Code</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={handloLogin} style={styles.button}>
+        <TouchableOpacity onPress={Main} style={styles.button}>
           <Text style={styles.buttonText}>Main</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={handloLogin} style={styles.button}>
+        <TouchableOpacity onPress={AddServer} style={styles.button}>
           <Text style={styles.buttonText}>AddServer</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={handloLogin} style={styles.button}>
+        <TouchableOpacity onPress={AtivarAlarme} style={styles.button}>
           <Text style={styles.buttonText}>ArmaAlarm</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={handloLogin} style={styles.button}>
@@ -81,7 +106,7 @@ const styles = StyleSheet.create({
   },
 
   button: {
-    height: 46,
+    height: 30,
     alignSelf: 'stretch',
     backgroundColor: "#003399",
     borderRadius: 4,

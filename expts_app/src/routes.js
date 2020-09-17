@@ -17,9 +17,6 @@ import Mainnext from './pages/Mainnext';
 import Telas from './pages/Telas';
 
 const Menudrawer = createDrawerNavigator({
-  Telas: {
-    screen: Telas,
-  }, 
   Main: {
     screen: Main,
   },
@@ -55,22 +52,15 @@ const Menudrawer = createDrawerNavigator({
 });
 
 const Routes = createSwitchNavigator({
+  Telas: {
+    screen: Telas,
+  }, 
   Auth: {
     screen: Login
   },
   Test: {
     screen: Menudrawer,
   },
-  Sendcode:{
-    screen: Sendcode,
-  },
-  Sendcodephone:{
-    screen: Sendcodephone,
-  },
-  Code:{
-    screen: Code,
-  }
-
 });
 
 export default createAppContainer(Routes);
