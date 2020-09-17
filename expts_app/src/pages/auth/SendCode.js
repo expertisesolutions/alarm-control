@@ -11,7 +11,7 @@ import Logo from '../../assets/logo.png';
 export default function Sendcodemail({navigation}){
 
   function Return(){
-    navigation.navigate('Login');
+    navigation.navigate('Telas');
   }
 
   return(

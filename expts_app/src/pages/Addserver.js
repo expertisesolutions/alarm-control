@@ -13,7 +13,7 @@ import opcao from '../assets/opcao.png';
 
 export default function Addserver({navigation}) {
   function handMain(){
-   navigation.navigate('Main');
+   navigation.navigate('Telas');
   }
 
   function OpenMenu(){

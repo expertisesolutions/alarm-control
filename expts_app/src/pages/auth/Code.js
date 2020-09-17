@@ -17,7 +17,7 @@ export default function Sendcodemail({navigation}){
   const [refQuatro, setRefQuatro] = React.useState();
 
   function Return(){
-    navigation.navigate('Login');
+    navigation.navigate('Telas');
   };
   function NextInput(){
     setRefDois(emFoco);

@@ -10,7 +10,7 @@ import server from '../../assets/server.png';
 
 export default function Register({navigation}) {
   function handloLogin(){
-   navigation.navigate('Main');
+   navigation.navigate('Telas');
   }
 
   

@@ -22,7 +22,7 @@ import foto10 from '../assets/main/foto10.jpg';
 
 export default function Main({navigation}) {
   function handMain(){
-   navigation.navigate('Ativaalarm');
+   navigation.navigate('Telas');
   }
 
   function Mainnext(){

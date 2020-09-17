@@ -10,7 +10,8 @@ import logo from '../assets/logo.png';
 //const Login= ({ navigation }) =>  {
 
 export default function Telas({navigation}) {
-     function handloLogin(){
+
+     function Login(){
       navigation.navigate('Login');
      }
 
@@ -36,7 +37,7 @@ export default function Telas({navigation}) {
      }
 
      function AtivarAlarme(){
-      navigation.navigate('Ativaalarm');
+      navigation.navigate('AtivaAlarm');
      }
 
      function Registrar(){
@@ -53,33 +54,50 @@ export default function Telas({navigation}) {
       <View style={styles.container}>
        <Image source={logo} />
       </View>
+
       <View style={styles.container}>
-        <TouchableOpacity onPress={handloLogin} style={styles.button}>
+
+        <TouchableOpacity onPress={Login} style={styles.button}>
+          <Text style={styles.buttonText}>. . . </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={Login} style={styles.button}>
           <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
+
         <TouchableOpacity onPress={SendCode} style={styles.button}>
           <Text style={styles.buttonText}>SendEmail</Text>
         </TouchableOpacity>
+
         <TouchableOpacity onPress={SendCodePhone} style={styles.button}>
           <Text style={styles.buttonText}>Send CodePhone</Text>
         </TouchableOpacity>
+
         <TouchableOpacity onPress={Code} style={styles.button}>
           <Text style={styles.buttonText}>Code</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={Main} style={styles.button}>
-          <Text style={styles.buttonText}>Main</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={AddServer} style={styles.button}>
-          <Text style={styles.buttonText}>AddServer</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={AtivarAlarme} style={styles.button}>
-          <Text style={styles.buttonText}>ArmaAlarm</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={handloLogin} style={styles.button}>
-          <Text style={styles.buttonText}>Mapas</Text>
-        </TouchableOpacity>
+
+
 
       </View >
+      <View style={styles.container}>
+      <TouchableOpacity onPress={Main} style={styles.button2}>
+          <Text style={styles.buttonText}>Main</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={AddServer} style={styles.button2}>
+          <Text style={styles.buttonText}>AddServer</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={AtivarAlarme} style={styles.button2}>
+          <Text style={styles.buttonText}>Ativa Alarme</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity  style={styles.button2}>
+          <Text style={styles.buttonText}>. . .</Text>
+        </TouchableOpacity>
+
+      </View>
       <View style={styles.foot}>
       </View>
     </KeyboardAvoidingView>
@@ -98,7 +116,6 @@ const styles = StyleSheet.create({
   },
 
   container: {
-    flex: 1,
     backgroundColor: "#F2F5F7",
     justifyContent: 'center',
     alignItems: 'center',
@@ -109,6 +126,17 @@ const styles = StyleSheet.create({
     height: 30,
     alignSelf: 'stretch',
     backgroundColor: "#003399",
+    borderRadius: 4,
+    marginTop: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginHorizontal: 10,
+  },
+
+  button2: {
+    height: 30,
+    alignSelf: 'stretch',
+    backgroundColor: "#CC0000",
     borderRadius: 4,
     marginTop: 20,
     justifyContent: 'center',

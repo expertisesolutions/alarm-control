@@ -17,6 +17,9 @@ import Mainnext from './pages/Mainnext';
 import Telas from './pages/Telas';
 
 const Menudrawer = createDrawerNavigator({
+  Auth: {
+    screen: Login
+  },
   Main: {
     screen: Main,
   },
@@ -55,9 +58,6 @@ const Routes = createSwitchNavigator({
   Telas: {
     screen: Telas,
   }, 
-  Auth: {
-    screen: Login
-  },
   Test: {
     screen: Menudrawer,
   },
