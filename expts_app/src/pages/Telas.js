@@ -5,13 +5,13 @@ import {
 } from 'react-native';
 
 //media
-import logo from '../../assets/logo.png';
+import logo from '../assets/logo.png';
 
 //const Login= ({ navigation }) =>  {
 
 export default function Login({navigation}) {
      function handloLogin(){
-      navigation.navigate('Telas');
+      navigation.navigate('Main');
      }
 
      function Registrar(){
@@ -29,26 +29,31 @@ export default function Login({navigation}) {
        <Image source={logo} />
       </View>
       <View style={styles.container}>
-        <TextInput 
-          autoCapitalize="none"
-          autoCorrect={false}
-          placeholder="Login"
-          placeholderTextColor="#999"
-          style={styles.input}
-        />
-        <TextInput 
-          placeholder="Login"
-          placeholderTextColor="#999"
-          style={styles.input}
-        />
         <TouchableOpacity onPress={handloLogin} style={styles.button}>
-          <Text style={styles.buttonText}>LOGIN</Text>
+          <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={Registrar} style={styles.registro}>
-          <View style={styles.view_foot}>
-            <Text style={styles.foottext}>Não possui acesso ? <Text style={styles.foottextBold}>Solicitar</Text></Text>
-          </View>
+        <TouchableOpacity onPress={handloLogin} style={styles.button}>
+          <Text style={styles.buttonText}>SendEmail</Text>
         </TouchableOpacity>
+        <TouchableOpacity onPress={handloLogin} style={styles.button}>
+          <Text style={styles.buttonText}>Send CodePhone</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={handloLogin} style={styles.button}>
+          <Text style={styles.buttonText}>Code</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={handloLogin} style={styles.button}>
+          <Text style={styles.buttonText}>Main</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={handloLogin} style={styles.button}>
+          <Text style={styles.buttonText}>AddServer</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={handloLogin} style={styles.button}>
+          <Text style={styles.buttonText}>ArmaAlarm</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={handloLogin} style={styles.button}>
+          <Text style={styles.buttonText}>Mapas</Text>
+        </TouchableOpacity>
+
       </View >
       <View style={styles.foot}>
       </View>
@@ -73,18 +78,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 30,
-  },
-
-  input: {
-    height: 46,
-    alignSelf: 'stretch',
-    backgroundColor: "#FFFF",
-    borderWidth: 1,
-    borderColor: '#F2F5F7',
-    borderRadius: 4,
-    marginTop: 20,
-    marginHorizontal: 10,
-    paddingHorizontal: 15,
   },
 
   button: {
@@ -113,9 +106,6 @@ const styles = StyleSheet.create({
     top: 175,
   },
 
-  registro:{
-
-  },
 
   view_foot: {
     marginTop: 40,

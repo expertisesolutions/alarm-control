@@ -14,9 +14,12 @@ import Main from './pages/Main';
 import Addserver from './pages/Addserver';
 import Ativaalarm from './pages/Armaralarm';
 import Mainnext from './pages/Mainnext';
+import Telas from './pages/Telas';
 
 const Menudrawer = createDrawerNavigator({
-
+  Telas: {
+    screen: Telas,
+  }, 
   Main: {
     screen: Main,
   },
@@ -33,6 +36,19 @@ const Menudrawer = createDrawerNavigator({
   Mainnext:{
     screen: Mainnext,
   },
+// Teslas de teste 
+  Auth: {
+    screen: Login
+  },
+  Sendcode:{
+    screen: Sendcode,
+  },
+  Sendcodephone:{
+    screen: Sendcodephone,
+  },
+  Code:{
+    screen: Code,
+  }
   
 },{
   contentComponent: CustonDrwer
