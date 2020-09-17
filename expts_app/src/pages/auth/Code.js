@@ -9,12 +9,27 @@ import Left from '../../assets/leftBlack.png';
 import Logo from '../../assets/logo.png';
 
 export default function Sendcodemail({navigation}){
+  let emFoco = true;
+  let foraFoco = false;
+  const [text, setText] = React.useState(styles.imputNumero2);
+  const [refDois, setRefDois] = React.useState();
+  const [refTres, setRefTres] = React.useState();
+  const [refQuatro, setRefQuatro] = React.useState();
 
   function Return(){
     navigation.navigate('Login');
   };
-  
-  const [text, setText] = React.useState(styles.imputNumero2);
+  function NextInput(){
+    setRefDois(emFoco);
+    console.log('dfsad')
+
+  }
+  function NextInputDois(){
+    setText(styles.imputNumero);
+    setRefUm(foraFoco);
+    setRefDois(emFoco);
+    console.log('dfsad')
+  }
   
   return(
     <KeyboardAvoidingView 
@@ -52,29 +67,36 @@ export default function Sendcodemail({navigation}){
           </View>
           <View style={styles.viewImput}> 
             <TextInput
-              autoCapitalize="none"
-              autoCorrect={false}
               style={styles.imputNumeroUm}
-              maxLength={1}
-            />
-            <TextInput
               autoCapitalize="none"
               autoCorrect={false}
-              style={text}
-              onChangeText={text => setText(styles.imputNumero)}
               maxLength={1}
+              keyboardType="number-pad"
+              onChangeText={text => NextInput() }
             />
             <TextInput
-              autoCapitalize="none"
-              autoCorrect={false}
-              style={styles.imputNumero}
-              maxLength={1}
-            />
-            <TextInput
+              autoFocus = {refDois}
               autoCapitalize="none"
               autoCorrect={false}
               style={styles.imputNumero}
               maxLength={1}
+              keyboardType="number-pad"
+            />
+            <TextInput
+              autoFocus = {refTres}
+              autoCapitalize="none"
+              autoCorrect={false}
+              style={styles.imputNumero}
+              maxLength={1}
+              keyboardType="number-pad"
+            />
+            <TextInput
+              autoFocus = {refQuatro}
+              autoCapitalize="none"
+              autoCorrect={false}
+              style={styles.imputNumero}
+              maxLength={1}
+              keyboardType="number-pad"
             />
           </View>
           <TouchableOpacity onPress={Return} style={styles.button}>
