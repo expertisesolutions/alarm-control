@@ -1,4 +1,4 @@
-import React from  'react';
+import React, {useState} from  'react';
 import {
   View, Text, TouchableOpacity, KeyboardAvoidingView, StyleSheet, 
   StatusBar, Image, TextInput
@@ -12,18 +12,10 @@ export default function Sendcodemail({navigation}){
 
   function Return(){
     navigation.navigate('Login');
-  }
-
-  function getInitialState() {
-    return { style: styles.textinput_unfocused }
-  }
-  function onFocuss() {
-    setState({ style: styles.textinput_focused })
-  }
-  function onBlurr() {
-    setState({ style: styles.imputNumero })
-  }
-
+  };
+  
+  const [text, setText] = React.useState(styles.imputNumero2);
+  
   return(
     <KeyboardAvoidingView 
       behavior="padding"
@@ -63,25 +55,26 @@ export default function Sendcodemail({navigation}){
               autoCapitalize="none"
               autoCorrect={false}
               style={styles.imputNumeroUm}
+              maxLength={1}
             />
             <TextInput
               autoCapitalize="none"
               autoCorrect={false}
-              style={styles.state.style}
-              onBlur={onBlurr}
-              onFocus={ onFocuss }
-
-              
-            />
-            <TextInput
-              autoCapitalize="none"
-              autoCorrect={false}
-              style={styles.imputNumero}
+              style={text}
+              onChangeText={text => setText(styles.imputNumero)}
+              maxLength={1}
             />
             <TextInput
               autoCapitalize="none"
               autoCorrect={false}
               style={styles.imputNumero}
+              maxLength={1}
+            />
+            <TextInput
+              autoCapitalize="none"
+              autoCorrect={false}
+              style={styles.imputNumero}
+              maxLength={1}
             />
           </View>
           <TouchableOpacity onPress={Return} style={styles.button}>
@@ -92,7 +85,7 @@ export default function Sendcodemail({navigation}){
 
     </KeyboardAvoidingView>
   )};
-
+  
 const styles = StyleSheet.create({
 
     containerbackground: {
@@ -205,10 +198,20 @@ const styles = StyleSheet.create({
       borderBottomWidth: 1,
       marginLeft: 18,
     },
+
+    imputNumero2: {
+      fontSize: 16,
+      height: 42,
+      width: 32,
+      backgroundColor: '#54d',
+      borderBottomColor: '#000',
+      borderBottomWidth: 1,
+      marginLeft: 18,
+    },
      
     textinput_focused: {
       backgroundColor: '#F543'
     },
+  
   });
-
 
