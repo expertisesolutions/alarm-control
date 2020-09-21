@@ -44,17 +44,17 @@ export default function Main({navigation}) {
       <StatusBar  barStyle="light-content" backgroundColor="#7C7B7B" />
 
       {/* HEAD */}
-      <View style={styles.container_head}>
-       <View style={styles.head_left}>
+      <View style={styles.containerHead}>
+       <View style={styles.headLeft}>
          <TouchableOpacity onPress={handMain}>
-          <Image  style={styles.img_left} source={left} />
+          <Image  style={styles.imgLeft} source={left} />
          </TouchableOpacity>
-         <Text style={styles.text_head}> Adicionar Server</Text>
+         <Text style={styles.textHead}> Adicionar Server</Text>
        </View>
-       <View style={styles.head_right}> 
-         <Image style={styles.img_right} source={lupa} />
+       <View style={styles.headRight}> 
+         <Image style={styles.imgHight} source={lupa} />
          <TouchableOpacity onPress={OpenMenu}>
-           <Image style={styles.img_right} source={opcao} />
+           <Image style={styles.imgHight} source={opcao} />
          </TouchableOpacity>
        </View>
       </View>
@@ -63,8 +63,8 @@ export default function Main({navigation}) {
       <View style={styles.view_body}>
 
         {/* Titulo */}
-        <View style={styles.view_titulo}>
-          <Text style={styles.text_titulo}>MENU GERAL</Text>
+        <View style={styles.viewTitulo}>
+          <Text style={styles.textTitulo}>MENU GERAL</Text>
         </View>
 
       </View>
@@ -97,21 +97,21 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
 
-  container_head: {
+  containerHead: {
     flexDirection: 'row',
     justifyContent: 'space-between' ,
     backgroundColor: "#CC0000",
     height:'8%',
   },
 
-  head_right:{
+  headRight:{
     flexDirection: 'row',
     alignItems: 'center',
     padding: 10,
   },
   
 
-  head_left: {
+  headLeft: {
     flexDirection: 'row',
     alignItems: 'center',
     padding: 10,
@@ -122,13 +122,13 @@ const styles = StyleSheet.create({
     height: "85%",
   },
 
-  view_titulo:{
+  viewTitulo:{
     height:'10%',
     alignItems: 'center',
     justifyContent: 'center',
   },
 
-  view_itens:{
+  viewItens:{
     flex: 1,
     flexDirection: 'row',
     flexWrap:'wrap',
@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
   },
 
-  view_subitem: {
+  viewSubitem: {
     height: 120,
     width: 120,
     marginTop: 7,
@@ -178,26 +178,26 @@ const styles = StyleSheet.create({
   },
 
 
-  img_right: {
+  imgHight: {
     height: 20,
     width: 20,
     marginRight: 10,
   },
 
-  text_head:{
+  textHead:{
     color: '#FFF',
     fontSize: 16,
     fontWeight: 'normal',
     marginLeft: 10,
   },
 
-  img_left: {
+  imgLeft: {
     height: 20,
     width: 20,
     marginTop: 5,
   },
 
-  img_item: {
+  imgItem: {
     flex: 1,
     position: 'relative',
     height: 120,
@@ -219,7 +219,7 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
 
-  text_titulo:{
+  textTitulo:{
     color: '#FFF',
     fontSize: 16,
     fontWeight: 'bold',

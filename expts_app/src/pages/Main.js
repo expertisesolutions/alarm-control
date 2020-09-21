@@ -55,7 +55,7 @@ export default function Main({navigation}) {
   let rows = []
   for(let i=0; i<9; i++){
     rows.push(
-      <View style={styles.view_subitem}>
+      <View style={styles.viewSubitem}>
         <Image
           key={foto02}
           source={foto03}
@@ -82,37 +82,37 @@ export default function Main({navigation}) {
       <StatusBar  barStyle="light-content" backgroundColor="#7C7B7B" />
 
       {/* HEAD */}
-      <View style={styles.container_head}>
-       <View style={styles.head_left}>
+      <View style={styles.containerHead}>
+       <View style={styles.headLeft}>
          <TouchableOpacity onPress={handMain}>
-          <Image  style={styles.img_left} source={left} />
+          <Image  style={styles.imgLeft} source={left} />
          </TouchableOpacity>
-         <Text style={styles.text_head}> Adicionar Server</Text>
+         <Text style={styles.textHead}> Adicionar Server</Text>
        </View>
-       <View style={styles.head_right}> 
-         <Image style={styles.img_right} source={lupa} />
+       <View style={styles.headRight}> 
+         <Image style={styles.imgRight} source={lupa} />
          <TouchableOpacity onPress={OpenMenu}>
-           <Image style={styles.img_right} source={opcao} />
+           <Image style={styles.imgRight} source={opcao} />
          </TouchableOpacity>
        </View>
       </View>
 
       {/*Body */}
-      <View style={styles.view_body}>
+      <View style={styles.viewBody}>
 
         {/* Titulo */}
-        <View style={styles.view_titulo}>
-          <Text style={styles.text_titulo}>MENU GERAL</Text>
+        <View style={styles.viewTitulo}>
+          <Text style={styles.textTitulo}>MENU GERAL</Text>
         </View>
 
         {/* Itens */}
-        <View style={styles.view_itens}>
+        <View style={styles.viewItens}>
           
-          <View style={styles.view_subitem}>
+          <View style={styles.viewSubitem}>
           <Image
             key={foto02}
             source={foto02}
-            style={styles.img_item}
+            style={styles.imgItem}
           />
           <View style={styles.transparentView}>
             <View style={styles.textViewStyle}>
@@ -122,11 +122,11 @@ export default function Main({navigation}) {
           </View>
          </View>
 
-         <View style={styles.view_subitem}>
+         <View style={styles.viewSubitem}>
           <Image
             key={foto10}
             source={foto10}
-            style={styles.img_item}
+            style={styles.imgItem}
           />
           <View style={styles.transparentView}>
             <View style={styles.textViewStyle}>
@@ -136,11 +136,11 @@ export default function Main({navigation}) {
           </View>
          </View>
 
-         <View style={styles.view_subitem}>
+         <View style={styles.viewSubitem}>
           <Image
             key={foto03}
             source={foto03}
-            style={styles.img_item}
+            style={styles.imgItem}
           />
           <View style={styles.transparentView}>
             <View style={styles.textViewStyle}>
@@ -150,11 +150,11 @@ export default function Main({navigation}) {
           </View>
          </View>
 
-         <View style={styles.view_subitem}>
+         <View style={styles.viewSubitem}>
           <Image
             key={foto04}
             source={foto04}
-            style={styles.img_item}
+            style={styles.imgItem}
           />
           <View style={styles.transparentView}>
             <View style={styles.textViewStyle}>
@@ -164,11 +164,11 @@ export default function Main({navigation}) {
           </View>
          </View>
 
-         <View style={styles.view_subitem}>
+         <View style={styles.viewSubitem}>
           <Image
             key={foto05}
             source={foto05}
-            style={styles.img_item}
+            style={styles.imgItem}
           />
           <View style={styles.transparentView}>
             <View style={styles.textViewStyle}>
@@ -178,11 +178,11 @@ export default function Main({navigation}) {
           </View>
          </View>
 
-         <View style={styles.view_subitem}>
+         <View style={styles.viewSubitem}>
           <Image
             key={foto06}
             source={foto06}
-            style={styles.img_item}
+            style={styles.imgItem}
           />
           <View style={styles.transparentView}>
             <View style={styles.textViewStyle}>
@@ -192,11 +192,11 @@ export default function Main({navigation}) {
           </View>
          </View>
 
-         <View style={styles.view_subitem}>
+         <View style={styles.viewSubitem}>
           <Image
             key={foto07}
             source={foto07}
-            style={styles.img_item}
+            style={styles.imgItem}
           />
           <View style={styles.transparentView}>
             <View style={styles.textViewStyle}>
@@ -206,11 +206,11 @@ export default function Main({navigation}) {
           </View>
          </View>
 
-         <View style={styles.view_subitem}>
+         <View style={styles.viewSubitem}>
           <Image
             key={foto08}
             source={foto08}
-            style={styles.img_item}
+            style={styles.imgItem}
           />
           <View style={styles.transparentView}>
             <View style={styles.textViewStyle}>
@@ -220,11 +220,11 @@ export default function Main({navigation}) {
           </View>
          </View>
 
-         <View style={styles.view_subitem}>
+         <View style={styles.viewSubitem}>
           <Image
             key={foto09}
             source={foto09}
-            style={styles.img_item}
+            style={styles.imgItem}
           />
           <View style={styles.transparentView}>
             <View style={styles.textViewStyle}>
@@ -266,38 +266,38 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
 
-  container_head: {
+  containerHead: {
     flexDirection: 'row',
     justifyContent: 'space-between' ,
     backgroundColor: "#CC0000",
     height:'8%',
   },
 
-  head_right:{
+  headRight:{
     flexDirection: 'row',
     alignItems: 'center',
     padding: 10,
   },
   
 
-  head_left: {
+  headLeft: {
     flexDirection: 'row',
     alignItems: 'center',
     padding: 10,
   },
 
-  view_body:{
+  viewBody:{
     backgroundColor: "#CC0000",
     height: "85%",
   },
 
-  view_titulo:{
+  viewTitulo:{
     height:'10%',
     alignItems: 'center',
     justifyContent: 'center',
   },
 
-  view_itens:{
+  viewItens:{
     flex: 1,
     flexDirection: 'row',
     flexWrap:'wrap',
@@ -326,7 +326,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
   },
 
-  view_subitem: {
+  viewSubitem: {
     height: 120,
     width: 120,
     marginTop: 7,
@@ -347,26 +347,26 @@ const styles = StyleSheet.create({
   },
 
 
-  img_right: {
+  imgRight: {
     height: 20,
     width: 20,
     marginRight: 10,
   },
 
-  text_head:{
+  textHead:{
     color: '#FFF',
     fontSize: 16,
     fontWeight: 'normal',
     marginLeft: 10,
   },
 
-  img_left: {
+  imgLeft: {
     height: 20,
     width: 20,
     marginTop: 5,
   },
 
-  img_item: {
+  imgItem: {
     flex: 1,
     position: 'relative',
     height: 120,
@@ -399,7 +399,7 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
 
-  text_titulo:{
+  textTitulo:{
     color: '#FFF',
     fontSize: 16,
     fontWeight: 'bold',
