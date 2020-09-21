@@ -44,6 +44,15 @@ export default function Telas({navigation}) {
       navigation.navigate('Register');
      }
 
+     function Disconnected(){
+      navigation.navigate('Disconnected');
+     }
+
+
+     function Nulo(){
+      
+     }
+
   return (
     <KeyboardAvoidingView 
       behavior="padding"
@@ -76,10 +85,8 @@ export default function Telas({navigation}) {
         <TouchableOpacity onPress={Code} style={styles.button}>
           <Text style={styles.buttonText}>Code</Text>
         </TouchableOpacity>
-
-
-
       </View >
+
       <View style={styles.container}>
       <TouchableOpacity onPress={Main} style={styles.button2}>
           <Text style={styles.buttonText}>Main</Text>
@@ -96,8 +103,26 @@ export default function Telas({navigation}) {
         <TouchableOpacity  style={styles.button2}>
           <Text style={styles.buttonText}>. . .</Text>
         </TouchableOpacity>
-
       </View>
+
+      <View style={styles.container}>
+      <TouchableOpacity onPress={Disconnected} style={styles.button3}>
+          <Text style={styles.buttonText}>Disconnected</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={Nulo} style={styles.button3}>
+          <Text style={styles.buttonText}>. . .</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={Nulo} style={styles.button3}>
+          <Text style={styles.buttonText}>. . .</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity  style={styles.button3}>
+          <Text style={styles.buttonText}>. . .</Text>
+        </TouchableOpacity>
+      </View>
+
       <View style={styles.foot}>
       </View>
     </KeyboardAvoidingView>
@@ -119,11 +144,11 @@ const styles = StyleSheet.create({
     backgroundColor: "#F2F5F7",
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 30,
+    padding: 5,
   },
 
   button: {
-    height: 30,
+    height: 25,
     alignSelf: 'stretch',
     backgroundColor: "#003399",
     borderRadius: 4,
@@ -134,9 +159,20 @@ const styles = StyleSheet.create({
   },
 
   button2: {
-    height: 30,
+    height: 25,
     alignSelf: 'stretch',
     backgroundColor: "#CC0000",
+    borderRadius: 4,
+    marginTop: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginHorizontal: 10,
+  },
+
+  button3: {
+    height: 25,
+    alignSelf: 'stretch',
+    backgroundColor: "#219653",
     borderRadius: 4,
     marginTop: 20,
     justifyContent: 'center',

@@ -54,7 +54,6 @@ export default function Sendcodemail({navigation}){
               autoCapitalize="none"
               autoCorrect={false}
               style={styles.imputDdd}
-              onFocus="1"
             />
             <TextInput
               autoCapitalize="none"

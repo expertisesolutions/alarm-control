@@ -37,7 +37,7 @@ export default function Login({navigation}) {
           style={styles.input}
         />
         <TextInput 
-          placeholder="Login"
+          placeholder="Pass"
           placeholderTextColor="#999"
           style={styles.input}
         />
@@ -78,9 +78,9 @@ const styles = StyleSheet.create({
   input: {
     height: 46,
     alignSelf: 'stretch',
-    backgroundColor: "#FFFF",
-    borderWidth: 1,
-    borderColor: '#F2F5F7',
+    backgroundColor: "#FFF",
+    borderBottomColor: '#999',
+    borderBottomWidth: 1,
     borderRadius: 4,
     marginTop: 20,
     marginHorizontal: 10,

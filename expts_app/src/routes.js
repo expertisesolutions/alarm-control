@@ -3,6 +3,8 @@ import {createSwitchNavigator} from 'react-navigation';
 import { createDrawerNavigator } from 'react-navigation-drawer';
 //menu lateral
 import CustonDrwer from './pages/services/CustonDrwer';
+//services
+import Disconnected from './pages/services/Disconnected';
 //pages auth
 import Register from './pages/auth/register';
 import Login from './pages/auth/Login';
@@ -17,7 +19,7 @@ import Mainnext from './pages/Mainnext';
 import Telas from './pages/Telas';
 
 const Menudrawer = createDrawerNavigator({
-  Auth: {
+  Login: {
     screen: Login
   },
   Main: {
@@ -30,12 +32,18 @@ const Menudrawer = createDrawerNavigator({
   Addserver: {
     screen: Addserver,
   },
-  Ativaalarm: {
+  AtivaAlarm: {
     screen: Ativaalarm,
   },
   Mainnext:{
     screen: Mainnext,
   },
+// Telas de serviços 
+ 
+  Disconnected: {
+    screen: Disconnected,
+  },
+  
 // Teslas de teste 
   Auth: {
     screen: Login
