@@ -1,13 +1,13 @@
 import React from 'react';
 import {
   View, Text, StyleSheet, KeyboardAvoidingView, StatusBar, Image,
-  TextInput, TouchableOpacity
+  TouchableOpacity
 
 } from 'react-native';
 
 //media
 import left from '../../assets/left.png';
-import logo from '../../assets/logo.png';
+import no_network from '../../assets/disconnected.svg';
 import lupa from '../../assets/lupa.png';
 import opcao from '../../assets/opcao.png';
 
@@ -46,58 +46,15 @@ export default function Disconnected({navigation}) {
       </View>
       
       {/* BODY */}
-      <View style={styles.container_logo}>
-       <Image style={styles.img_logo} source={logo} />
-      </View>
 
       {/* Formularios*/}
-      <View style={styles.view_form}>
-      <TextInput 
-          autoCapitalize="none"
-          autoCorrect={false}
-          placeholder="Nome"
-          placeholderTextColor="#999"
-          style={styles.input}
-        />
-        <TextInput 
-          autoCapitalize="none"
-          autoCorrect={false}
-          placeholder="IP/Host"
-          placeholderTextColor="#999"
-          style={styles.input}
-        />
-        <TextInput 
-          autoCapitalize="none"
-          autoCorrect={false}
-          placeholder="Login"
-          placeholderTextColor="#999"
-          style={styles.input}
-        />
-        <TextInput 
-          autoCapitalize="none"
-          autoCorrect={false}
-          placeholder="Password"
-          placeholderTextColor="#999"
-          style={styles.input}
-        />
-        <TextInput 
-          autoCapitalize="none"
-          autoCorrect={false}
-          placeholder="Confirma Password"
-          placeholderTextColor="#999"
-          style={styles.input}
-        />
-        <TouchableOpacity onPress={handMain} style={styles.button}>
-          <Text style={styles.buttontext}>Add server</Text>
-        </TouchableOpacity>
+      <View style={styles.viewBody}>
+        <Image style={styles.imageBody} source={no_network}/>
+        <Text>Desconectado</Text>
       </View>
 
       {/* Foot*/}
-      <View style={styles.view_foot}>
-        <Text style={styles.foottext}>Não possui acesso ? <Text style={styles.foottextBold}>Solicitar</Text></Text>
-      </View>
-
-
+    
     </KeyboardAvoidingView>
   );
 };
@@ -130,23 +87,10 @@ const styles = StyleSheet.create({
     padding: 10,
   },
 
-  container_logo: {
+  viewBody: {
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    height: '30%',
-    padding: 30,
-  },
-
-  view_form: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    height:'53%',
-    padding: 7,
-  },
-  view_foot: {
-    //justifyContent: 'center',
-    alignItems: 'center',
-    height: '10%',
   },
 
   img_left: {
@@ -173,49 +117,12 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
 
-  input: {
-    height: 42,
-    alignSelf: 'stretch',
-    backgroundColor: "#FFFF",
-    borderWidth: 1,
-    borderColor: '#F2F5F7',
-    borderRadius: 4,
-    marginTop: 12,
-    marginHorizontal: 10,
-    paddingHorizontal: 15,
-  },
-
-  button: {
-    height: 46,
-    alignSelf: 'stretch',
-    backgroundColor: "#003399",
-    borderRadius: 4,
-    marginTop: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginHorizontal: 10,
-    zIndex: 99,
-  },
-
-  buttontext: {
-    color: '#FFF',
-    fontSize: 16,
-    fontWeight: 'normal',
-  },
-
-  foottext: {
+  imageBody: {
+    height: 37,
+    width: 37,
     color: '#000',
-    fontSize: 16,
-    fontWeight: 'normal',
   },
-
-  foottextBold: {
-    color: '#000',
-    fontSize: 16,
-    fontWeight: 'bold' ,
-  },
-
-
+  
 });
 
 //justifyContent: 'center',
