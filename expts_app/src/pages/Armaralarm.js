@@ -13,6 +13,8 @@ import lupa from '../assets/lupa.png';
 import opcao from '../assets/opcao.png';
 import soma from '../assets/soma.png';
 
+import HeadBlue from './services/HeadBlue'
+
 export default function Ativaalarm({navigation}) {
   function handMain(){
     navigation.navigate('Telas');
@@ -35,20 +37,8 @@ export default function Ativaalarm({navigation}) {
        <View style={styles.containerHead}>
 
          {/* HEAD */}
-        <View style={styles.viewhead}>
-          <View style={styles.headLeft}>
-            <TouchableOpacity onPress={handMain}>
-              <Image  style={styles.imgLeft} source={left} />
-            </TouchableOpacity>
-            <Text style={styles.textHead}> Adicionar Server</Text>
-          </View>
-          <View style={styles.headRight}> 
-            <Image style={styles.imgRight} source={lupa} />
-            <TouchableOpacity onPress={OpenMenu}>
-              <Image style={styles.imgRight} source={opcao} />
-            </TouchableOpacity>
-          </View>
-        </View>
+
+         <HeadBlue/>
 
         {/*Titulo*/}
         <View style={styles.viewtitulo}>
