@@ -7,7 +7,7 @@ import {
 
 //media
 import left from '../../assets/left.png';
-import no_network from '../../assets/disconnected.svg';
+import server_off from '../../assets/server_off.png';
 import lupa from '../../assets/lupa.png';
 import opcao from '../../assets/opcao.png';
 
@@ -49,8 +49,11 @@ export default function Disconnected({navigation}) {
 
       {/* Formularios*/}
       <View style={styles.viewBody}>
-        <Image style={styles.imageBody} source={no_network}/>
-        <Text>Desconectado</Text>
+        <Image style={styles.imageBody} source={server_off}/>
+        <Text style={styles.textBody}>Sem Conexão</Text>
+        <TouchableOpacity onPress={OpenMenu}>
+          <Text style={styles.textRetry}>Retry</Text>
+        </TouchableOpacity>
       </View>
 
       {/* Foot*/}
@@ -118,9 +121,22 @@ const styles = StyleSheet.create({
   },
 
   imageBody: {
-    height: 37,
-    width: 37,
+    height: 50,
+    width: 50,
+  },
+
+  textBody:{
     color: '#000',
+    marginTop: 50,
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+
+  textRetry:{
+    color: '#000',
+    marginTop: 18,
+    fontSize: 15,
+    fontWeight: 'normal',
   },
   
 });
