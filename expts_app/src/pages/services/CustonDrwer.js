@@ -9,6 +9,9 @@ import {openDrawer} from 'react-navigation-drawer';
 //media
 
 import Menu from '../../assets/menu.png'
+import Home from '../../assets/home_menu.png'
+import Exchange from '../../assets/exchange.png'
+import Logout from '../../assets/logout.png'
 
 
 export default function CustonDrawer({...props}){
@@ -21,27 +24,17 @@ export default function CustonDrawer({...props}){
       <View style={styles.viewItens}>
 
         <View style={styles.viewItem}>
-          <Image source={Menu} style={styles.iconItem}/>
+          <Image source={Home} style={styles.iconItem}/>
           <Text style={styles.textoItem}> Texto Item</Text>
         </View>
 
         <View style={styles.viewItem}>
-          <Image source={Menu} style={styles.iconItem}/>
+          <Image source={Exchange} style={styles.iconItem}/>
           <Text style={styles.textoItem}> Texto Item</Text>
         </View>
 
         <View style={styles.viewItem}>
-          <Image source={Menu} style={styles.iconItem}/>
-          <Text style={styles.textoItem}> Texto Item</Text>
-        </View>
-
-        <View style={styles.viewItem}>
-          <Image source={Menu} style={styles.iconItem}/>
-          <Text style={styles.textoItem}> Texto Item</Text>
-        </View>
-
-        <View style={styles.viewItem}>
-          <Image source={Menu} style={styles.iconItem}/>
+          <Image source={Logout} style={styles.iconItem}/>
           <Text style={styles.textoItem}> Texto Item</Text>
         </View>
 
