@@ -32,20 +32,20 @@ export default function Ativaalarm({navigation}) {
        <StatusBar  barStyle="light-content" backgroundColor="#7C7B7B" />
  
        {/* GRUPO HEAD */}
-       <View style={styles.container_head}>
+       <View style={styles.containerHead}>
 
          {/* HEAD */}
         <View style={styles.viewhead}>
-          <View style={styles.head_left}>
+          <View style={styles.headLeft}>
             <TouchableOpacity onPress={handMain}>
-              <Image  style={styles.img_left} source={left} />
+              <Image  style={styles.imgLeft} source={left} />
             </TouchableOpacity>
-            <Text style={styles.text_head}> Adicionar Server</Text>
+            <Text style={styles.textHead}> Adicionar Server</Text>
           </View>
-          <View style={styles.head_right}> 
-            <Image style={styles.img_right} source={lupa} />
+          <View style={styles.headRight}> 
+            <Image style={styles.imgRight} source={lupa} />
             <TouchableOpacity onPress={OpenMenu}>
-              <Image style={styles.img_right} source={opcao} />
+              <Image style={styles.imgRight} source={opcao} />
             </TouchableOpacity>
           </View>
         </View>
@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
     //paddingTop: Constant
   },
 
-  container_head: {
+  containerHead: {
     height:'20%',
   },
 
@@ -152,36 +152,31 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 
-  head_left: {
+  headLeft: {
     flexDirection: 'row',
     alignItems: 'center',
     padding: 10,
   },
 
-  head_right:{
+  headRight:{
     flexDirection: 'row',
     padding: 10,
   },
 
-  text_head:{
+  textHead:{
     color: '#FFF',
     fontSize: 16,
     fontWeight: 'normal',
     marginLeft: 10,
   },
 
-  head_right:{
-    flexDirection: 'row',
-    padding: 10,
-  },
-
-  img_right: {
+  imgRight: {
     height: 20,
     width: 20,
     marginRight: 10,
   },
 
-  img_left: {
+  imgLeft: {
     height: 20,
     width: 20,
     marginTop: 5,
