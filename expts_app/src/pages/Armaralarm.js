@@ -6,13 +6,10 @@ import {
 } from 'react-native';
 
 //media
-import left from '../assets/left.png';
 import home from '../assets/home.png';
 import logo from '../assets/logo.png';
-import lupa from '../assets/lupa.png';
-import opcao from '../assets/opcao.png';
 import soma from '../assets/soma.png';
-
+//componets
 import HeadBlue from './components/HeadBlue'
 
 export default function Ativaalarm({navigation}) {
@@ -26,12 +23,9 @@ export default function Ativaalarm({navigation}) {
        {/* Status bar */}
        <StatusBar  barStyle="light-content" backgroundColor="#7C7B7B" />
  
-       {/* GRUPO HEAD */}
-       <View style={styles.containerHead}>
+       {/* HEAD */}
 
-         {/* HEAD */}
-
-         <HeadBlue funHead={navigation}/>
+        <HeadBlue  funHead={navigation} />
 
         {/*Titulo*/}
         <View style={styles.viewtitulo}>
@@ -41,7 +35,6 @@ export default function Ativaalarm({navigation}) {
            <Text> Central de automação</Text>
           </View>
         </View>
-      </View>
 
       {/*Body*/}
       <View style={styles.viewbody}>
@@ -123,10 +116,6 @@ const styles = StyleSheet.create({
     //paddingTop: Constant
   },
 
-  containerHead: {
-    height:'20%',
-  },
-
   viewhead: {
     flexDirection: 'row',
     justifyContent: 'space-between' ,
@@ -174,7 +163,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     padding: 15,
-    height:'60%',
+    height:'13%',
   },
 
   viewbody: {
