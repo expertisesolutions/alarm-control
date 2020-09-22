@@ -16,13 +16,6 @@ import soma from '../assets/soma.png';
 import HeadBlue from './services/HeadBlue'
 
 export default function Ativaalarm({navigation}) {
-  function handMain(){
-    navigation.navigate('Telas');
-  }
-
-  function OpenMenu(){
-    navigation.openDrawer();
-  }
  
    return (
      <KeyboardAvoidingView 
@@ -38,7 +31,7 @@ export default function Ativaalarm({navigation}) {
 
          {/* HEAD */}
 
-         <HeadBlue/>
+         <HeadBlue funHead={navigation}/>
 
         {/*Titulo*/}
         <View style={styles.viewtitulo}>

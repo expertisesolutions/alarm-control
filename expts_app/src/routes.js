@@ -5,6 +5,8 @@ import { createDrawerNavigator } from 'react-navigation-drawer';
 import CustonDrwer from './pages/services/CustonDrwer';
 //services
 import Disconnected from './pages/services/Disconnected';
+import HeadBlue from './pages/services/HeadBlue';
+
 //pages auth
 import Register from './pages/auth/register';
 import Login from './pages/auth/Login';

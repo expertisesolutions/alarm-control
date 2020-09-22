@@ -15,11 +15,11 @@ import soma from '../../assets/soma.png';
 
 export default function HeadBlue({...props}) {
   function handMain(){
-    navigation.navigate('Telas');
+    props.funHead.navigate('Telas');
   }
 
   function OpenMenu(){
-    navigation.openDrawer();
+    props.funHead.openDrawer();
   }
  
    return (
