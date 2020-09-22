@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between' ,
     backgroundColor: "#003399",
-    height:'40%',
+    height:'7%',
     alignItems: 'center',
   },
 
