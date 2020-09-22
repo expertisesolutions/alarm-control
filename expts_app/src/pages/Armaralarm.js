@@ -13,7 +13,7 @@ import lupa from '../assets/lupa.png';
 import opcao from '../assets/opcao.png';
 import soma from '../assets/soma.png';
 
-import HeadBlue from './services/HeadBlue'
+import HeadBlue from './components/HeadBlue'
 
 export default function Ativaalarm({navigation}) {
  
