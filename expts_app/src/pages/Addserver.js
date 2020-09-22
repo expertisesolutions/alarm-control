@@ -6,18 +6,13 @@ import {
 } from 'react-native';
 
 //media
-import left from '../assets/left.png';
 import logo from '../assets/logo.png';
-import lupa from '../assets/lupa.png';
-import opcao from '../assets/opcao.png';
+//componets
+import HeadBlue from './components/HeadBlue'
 
 export default function Addserver({navigation}) {
   function handMain(){
    navigation.navigate('Telas');
-  }
-
-  function OpenMenu(){
-    navigation.openDrawer();
   }
   
   return (
@@ -30,21 +25,8 @@ export default function Addserver({navigation}) {
       <StatusBar  barStyle="light-content" backgroundColor="#7C7B7B" />
 
       {/* HEAD */}
-      <View style={styles.containerHead}>
-       <View style={styles.headLeft}>
-         <TouchableOpacity onPress={handMain}>
-          <Image  style={styles.imgLeft} source={left} />
-         </TouchableOpacity>
-         <Text style={styles.textHead}> Adicionar Server</Text>
-       </View>
-       <View style={styles.headRight}> 
-         <Image style={styles.imgRight} source={lupa} />
-         <TouchableOpacity onPress={OpenMenu}>
-           <Image style={styles.imgRight} source={opcao} />
-         </TouchableOpacity>
-       </View>
-      </View>
-      
+        <HeadBlue  funHead={navigation} />
+
       {/* BODY */}
       <View style={styles.containerLogo}>
        <Image style={styles.imgLogo} source={logo} />
@@ -110,26 +92,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 0,
     //paddingTop: Constant
   },
-
-  containerHead: {
-    flexDirection: 'row',
-    justifyContent: 'space-between' ,
-    backgroundColor: "#003399",
-    height:'7%',
-    alignItems: 'center',
-  },
   
-  headLeft: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    padding: 10,
-  },
-
-  headRight:{
-    flexDirection: 'row',
-    padding: 10,
-  },
-
   containerLogo: {
     justifyContent: 'center',
     alignItems: 'center',
@@ -147,18 +110,6 @@ const styles = StyleSheet.create({
     //justifyContent: 'center',
     alignItems: 'center',
     height: '10%',
-  },
-
-  imgLeft: {
-    height: 20,
-    width: 20,
-    marginTop: 5,
-  },
-
-  imgRight: {
-    height: 20,
-    width: 20,
-    marginRight: 10,
   },
 
   imgLogo: {
@@ -215,9 +166,5 @@ const styles = StyleSheet.create({
     fontWeight: 'bold' ,
   },
 
-
 });
 
-//justifyContent: 'center',
-//    alignItems: 'center',
-//    padding: 30,
