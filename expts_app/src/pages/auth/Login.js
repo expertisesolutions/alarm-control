@@ -26,7 +26,7 @@ export default function Login({navigation}) {
       >
       <StatusBar  barStyle="light-content" backgroundColor="#003399" />
       <View style={styles.container}>
-       <Image source={logo} />
+       <Image style={styles.ImgLogo} source={logo} />
       </View>
       <View style={styles.container}>
         <TextInput 
@@ -130,6 +130,10 @@ const styles = StyleSheet.create({
     fontWeight: 'normal',
   },
 
+  ImgLogo: {
+    height: 50,
+    width: 50,
+  }
 
 });
 
