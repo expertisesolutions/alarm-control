@@ -15,7 +15,7 @@ import Code from './pages/auth/Code';
 //pages app
 import Main from './pages/Main';
 import Addserver from './pages/Addserver';
-import Ativaalarm from './pages/Armaralarm';
+import Armaralarm from './pages/Armaralarm';
 import Mainnext from './pages/Mainnext';
 import Telas from './pages/Telas';
 
@@ -29,6 +29,17 @@ export default function Routes(){
       <AppStack.Navigator screenOptions={{ headerShown: false}}>
         
         <AppStack.Screen name="Telas" component={Telas} />
+        <AppStack.Screen name="Login" component={Login} />
+        <AppStack.Screen name="Sendcode" component={Sendcode} />
+        <AppStack.Screen name="Sendcodephone" component={Sendcodephone} />
+        <AppStack.Screen name="Code" component={Code} />
+        <AppStack.Screen name="Register" component={Register} />
+        <AppStack.Screen name="Main" component={Main} />
+        <AppStack.Screen name="Addserver" component={Addserver} />
+        <AppStack.Screen name="Armaralarm" component={Armaralarm} />
+        <AppStack.Screen name="Mainnext" component={Mainnext} />
+        <AppStack.Screen name="Disconnected" component={Disconnected} />
+
         
         {/* 
         <AppStack.Screen name="Teste" component={Teste} />
