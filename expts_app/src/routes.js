@@ -3,7 +3,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 //menu lateral
-import CustonDrwer from './pages/services/CustonDrwer';
+  //import CustonDrwer from './pages/services/CustonDrwer';
 //services
 import Disconnected from './pages/services/Disconnected';
 //pages auth
@@ -27,20 +27,14 @@ export default function Routes(){
     <NavigationContainer>
 
       <AppStack.Navigator screenOptions={{ headerShown: false}}>
-        <AppStack.Screen name="Initial" component={Initial} />
-        <AppStack.Screen name="Main" component={Main} />
-        <AppStack.Screen name="Register" component={Register} header={null} />
-        <AppStack.Screen name="Historic" component={Historic} />
-        <AppStack.Screen name="Quiz" component={Quiz} />
-        <AppStack.Screen name="Result" component={Result} />
-        <AppStack.Screen name="Controler" component={Controler} />
         
+        <AppStack.Screen name="Telas" component={Telas} />
         
         {/* 
         <AppStack.Screen name="Teste" component={Teste} />
         <AppStack.Screen name="Quiz" component={Quiz} />
         <AppStack.Screen name="Historic" component={Historic} />
-        <AppStack.Screen name="Register" component={Register} />
+        <AppStack.Screen name="Register" component={Register} header={null} />
         <AppStack.Screen name="Main" component={Main} />
         <AppStack.Screen name="Initial" component={Initial} />
         <AppStack.Screen name="Controler" component={Controler} />
