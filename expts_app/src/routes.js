@@ -1,6 +1,7 @@
-import {createAppContainer} from 'react-navigation';
-import {createSwitchNavigator} from 'react-navigation';
-import { createDrawerNavigator } from 'react-navigation-drawer';
+import React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+
 //menu lateral
 import CustonDrwer from './pages/services/CustonDrwer';
 //services
@@ -18,61 +19,35 @@ import Ativaalarm from './pages/Armaralarm';
 import Mainnext from './pages/Mainnext';
 import Telas from './pages/Telas';
 
-const Menudrawer = createDrawerNavigator({
-  Login: {
-    screen: Login
-  },
-  Main: {
-    screen: Main,
-  },
-  Register: {
-    screen: Register,
-  },
-  
-  Addserver: {
-    screen: Addserver,
-  },
-  AtivaAlarm: {
-    screen: Ativaalarm,
-  },
-  Mainnext:{
-    screen: Mainnext,
-  },
-// Telas de serviços 
- 
-  Disconnected: {
-    screen: Disconnected,
-  },
-  
-// Teslas de teste 
-  Auth: {
-    screen: Login
-  },
-  Sendcode:{
-    screen: Sendcode,
-  },
-  Sendcodephone:{
-    screen: Sendcodephone,
-  },
-  Code:{
-    screen: Code,
-  }
-  
-},{
-  contentComponent: CustonDrwer
-});
 
-const Routes = createSwitchNavigator({
-  Telas: {
-    screen: Telas,
-  }, 
-  Test: {
-    screen: Menudrawer,
-  },
-});
+const AppStack = createStackNavigator();
 
-export default createAppContainer(Routes);
+export default function Routes(){
+  return(
+    <NavigationContainer>
 
-// Rotas: {
-// screen: Routes, f
-// },
+      <AppStack.Navigator screenOptions={{ headerShown: false}}>
+        <AppStack.Screen name="Initial" component={Initial} />
+        <AppStack.Screen name="Main" component={Main} />
+        <AppStack.Screen name="Register" component={Register} header={null} />
+        <AppStack.Screen name="Historic" component={Historic} />
+        <AppStack.Screen name="Quiz" component={Quiz} />
+        <AppStack.Screen name="Result" component={Result} />
+        <AppStack.Screen name="Controler" component={Controler} />
+        
+        
+        {/* 
+        <AppStack.Screen name="Teste" component={Teste} />
+        <AppStack.Screen name="Quiz" component={Quiz} />
+        <AppStack.Screen name="Historic" component={Historic} />
+        <AppStack.Screen name="Register" component={Register} />
+        <AppStack.Screen name="Main" component={Main} />
+        <AppStack.Screen name="Initial" component={Initial} />
+        <AppStack.Screen name="Controler" component={Controler} />
+        */}
+
+      </AppStack.Navigator> 
+      
+    </NavigationContainer>
+  );
+}
