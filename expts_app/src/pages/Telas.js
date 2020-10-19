@@ -37,7 +37,7 @@ export default function Telas({navigation}) {
      }
 
      function AtivarAlarme(){
-      navigation.navigate('AtivaAlarm');
+      navigation.navigate('Armaralarm');
      }
 
      function Registrar(){

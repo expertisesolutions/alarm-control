@@ -12,7 +12,7 @@ import soma from '../assets/soma.png';
 //componets
 import HeadBlue from './components/HeadBlue'
 
-export default function Ativaalarm({navigation}) {
+export default function Armaralarm({navigation}) {
  
    return (
      <KeyboardAvoidingView 
