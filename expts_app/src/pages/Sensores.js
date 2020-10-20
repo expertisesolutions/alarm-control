@@ -2,8 +2,9 @@ import React from 'react';
 import {
   View, Text, StyleSheet, KeyboardAvoidingView, StatusBar, Image,
   TextInput, TouchableOpacity
-
 } from 'react-native';
+
+import CheckBox from '@react-native-community/checkbox';
 
 //media
 import logo from '../assets/logo.png';
@@ -15,7 +16,6 @@ export default function Sensores({navigation}) {
    navigation.navigate('Telas');
   }
   
-   
   return (
     <KeyboardAvoidingView 
         behavior="padding"
@@ -38,13 +38,16 @@ export default function Sensores({navigation}) {
         
 
         <View style={styles.containerSensor} > 
-          <View style={styles.viewSensor} >
-            <Text style={styles.textName} >Nome do Sensor</Text>
-            <Text style={styles.textType} >Dados do Sensor</Text>
-          </View>
-          <Image style={styles.imgLogo} source={logo} />
+            <View style={styles.viewSensor} >
+              <Text style={styles.textName} >Nome do Sensor</Text>
+              <Text style={styles.textType} >Dados do Sensor</Text>
+            </View>
+            <View style={styles.TEste}>
+              <CheckBox
+                  disabled={false}
+              />
+            </View>
         </View>
-
       </View>
 
       <View style={styles.containerFoot}>
@@ -58,6 +61,7 @@ export default function Sensores({navigation}) {
   
   const styles = StyleSheet.create({
 
+    
     containerbackground: {
       flex: 1,
       //backgroundColor: "#F2F5F7",
@@ -83,6 +87,7 @@ export default function Sensores({navigation}) {
     containerSensor:{
       flexDirection: 'row',
       justifyContent: 'space-between',
+      height: 10,
     },
 
     containerFoot: {
@@ -102,7 +107,7 @@ export default function Sensores({navigation}) {
 
     textName:{
       color: '#000',
-      fontSize: 15,
+      fontSize: 16,
       fontWeight: 'bold',
     },
     textType: {
@@ -110,5 +115,16 @@ export default function Sensores({navigation}) {
       fontSize: 14,
       fontWeight: 'normal',
     },
+
+    TEste:{
+      marginRight: '8%',
+      width: '28%',
+      height: 40,
+      marginTop: 5,
+      alignItems: 'flex-end',
+      justifyContent: 'center',
+      backgroundColor: '#B5a'
+    },
+
 
   })
