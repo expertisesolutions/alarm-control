@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View, Text, StyleSheet, KeyboardAvoidingView, StatusBar, Image,
-  TextInput, TouchableOpacity
+  ScrollView, SafeAreaView,
 } from 'react-native';
 
 import CheckBox from '@react-native-community/checkbox';
@@ -12,6 +12,17 @@ import logo from '../assets/logo.png';
 import HeadBlue from './components/HeadBlue'
 
 export default function Sensores({navigation}) {
+
+  const [sensor001, set001] = useState([0,false]);
+  const [sensor002, set002] = useState([0,false]);
+  const [sensor003, set003] = useState([0,false]);
+  const [sensor004, set004] = useState([0,false]);
+  const [sensor005, set005] = useState([0,false]);
+  const [sensor006, set006] = useState([0,false]);
+  const [sensor007, set007] = useState([0,false]);
+  const [sensor008, set008] = useState([0,false]);
+
+
   function handMain(){
    navigation.navigate('Telas');
   }
@@ -35,23 +46,133 @@ export default function Sensores({navigation}) {
       </View>
 
       <View style={styles.containerBody} >
-        
+              
+             <SafeAreaView>
+                <ScrollView
+                  contentInsetAdjustmentBehavior="automatic"
+                  style={styles.scrollView}>
 
-        <View style={styles.containerSensor} > 
-            <View style={styles.viewSensor} >
-              <Text style={styles.textName} >Nome do Sensor</Text>
-              <Text style={styles.textType} >Dados do Sensor</Text>
-            </View>
-            <View style={styles.TEste}>
-              <CheckBox
-                  disabled={false}
-              />
-            </View>
-        </View>
+                              <View style={styles.containerSensor} > 
+                                  <View style={styles.viewSensor} >
+                                    <Text style={styles.textName} >Nome do Sensor</Text>
+                                    <Text style={styles.textType} >Dados do Sensor</Text>
+                                  </View>
+                                  <View style={styles.viewCheckbox}>
+                                    <CheckBox
+                                        disabled={false}
+                                        value={sensor001[1]}
+                                        onValueChange={(newValue) => set001([20,newValue])}
+                                    />
+                                  </View>
+                              </View>
+
+
+                              <View style={styles.containerSensor} > 
+                                  <View style={styles.viewSensor} >
+                                    <Text style={styles.textName} >Nome do Sensor</Text>
+                                    <Text style={styles.textType} >Dados do Sensor</Text>
+                                  </View>
+                                  <View style={styles.viewCheckbox}>
+                                    <CheckBox
+                                        disabled={false}
+                                        value={sensor002[1]}
+                                        onValueChange={(newValue) => set002([20,newValue])}
+                                    />
+                                  </View>
+                              </View>
+
+                              <View style={styles.containerSensor} > 
+                                  <View style={styles.viewSensor} >
+                                    <Text style={styles.textName} >Nome do Sensor</Text>
+                                    <Text style={styles.textType} >Dados do Sensor</Text>
+                                  </View>
+                                  <View style={styles.viewCheckbox}>
+                                    <CheckBox
+                                        disabled={false}
+                                        value={sensor003[1]}
+                                        onValueChange={(newValue) => set003([20,newValue])}
+                                    />
+                                  </View>
+                              </View>
+
+                              <View style={styles.containerSensor} > 
+                                  <View style={styles.viewSensor} >
+                                    <Text style={styles.textName} >Nome do Sensor</Text>
+                                    <Text style={styles.textType} >Dados do Sensor</Text>
+                                  </View>
+                                  <View style={styles.viewCheckbox}>
+                                    <CheckBox
+                                        disabled={false}
+                                        value={sensor004[1]}
+                                        onValueChange={(newValue) => set004([20,newValue])}
+                                    />
+                                  </View>
+                              </View>
+
+                              <View style={styles.containerSensor} > 
+                                  <View style={styles.viewSensor} >
+                                    <Text style={styles.textName} >Nome do Sensor</Text>
+                                    <Text style={styles.textType} >Dados do Sensor</Text>
+                                  </View>
+                                  <View style={styles.viewCheckbox}>
+                                    <CheckBox
+                                        disabled={false}
+                                        value={sensor005[1]}
+                                        onValueChange={(newValue) => set005([20,newValue])}
+                                    />
+                                  </View>
+                              </View>
+
+                              <View style={styles.containerSensor} > 
+                                  <View style={styles.viewSensor} >
+                                    <Text style={styles.textName} >Nome do Sensor</Text>
+                                    <Text style={styles.textType} >Dados do Sensor</Text>
+                                  </View>
+                                  <View style={styles.viewCheckbox}>
+                                    <CheckBox
+                                        disabled={false}
+                                        value={sensor006[1]}
+                                        onValueChange={(newValue) => set006([20,newValue])}
+                                    />
+                                  </View>
+                              </View>
+
+                              <View style={styles.containerSensor} > 
+                                  <View style={styles.viewSensor} >
+                                    <Text style={styles.textName} >Nome do Sensor</Text>
+                                    <Text style={styles.textType} >Dados do Sensor</Text>
+                                  </View>
+                                  <View style={styles.viewCheckbox}>
+                                    <CheckBox
+                                        disabled={false}
+                                        value={sensor006[1]}
+                                        onValueChange={(newValue) => set006([20,newValue])}
+                                    />
+                                  </View>
+                              </View>
+
+
+                              <View style={styles.containerSensor} > 
+                                  <View style={styles.viewSensor} >
+                                    <Text style={styles.textName} >Nome do Sensor</Text>
+                                    <Text style={styles.textType} >Dados do Sensor</Text>
+                                  </View>
+                                  <View style={styles.viewCheckbox}>
+                                    <CheckBox
+                                        disabled={false}
+                                        value={sensor006[1]}
+                                        onValueChange={(newValue) => set006([20,newValue])}
+                                    />
+                                  </View>
+                              </View>
+
+                              
+                    </ScrollView>
+                </SafeAreaView>
       </View>
 
       <View style={styles.containerFoot}>
-        <Text>teste</Text>
+        <Text>vgfdg</Text>
       </View>
 
     </KeyboardAvoidingView>
@@ -61,7 +182,6 @@ export default function Sensores({navigation}) {
   
   const styles = StyleSheet.create({
 
-    
     containerbackground: {
       flex: 1,
       //backgroundColor: "#F2F5F7",
@@ -81,13 +201,16 @@ export default function Sensores({navigation}) {
 
     containerBody: {
       height: '65%',
+      justifyContent: 'flex-start',
       backgroundColor: '#FA4',
     },
 
     containerSensor:{
       flexDirection: 'row',
       justifyContent: 'space-between',
-      height: 10,
+      height: '20%',
+      backgroundColor: '#424',
+
     },
 
     containerFoot: {
@@ -109,6 +232,7 @@ export default function Sensores({navigation}) {
       color: '#000',
       fontSize: 16,
       fontWeight: 'bold',
+
     },
     textType: {
       color: '#878585',
@@ -116,7 +240,7 @@ export default function Sensores({navigation}) {
       fontWeight: 'normal',
     },
 
-    TEste:{
+    viewCheckbox:{
       marginRight: '8%',
       width: '28%',
       height: 40,
@@ -126,5 +250,8 @@ export default function Sensores({navigation}) {
       backgroundColor: '#B5a'
     },
 
+    scrollView: {
+      height: '100%',
+    },
 
   })
