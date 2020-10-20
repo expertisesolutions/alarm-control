@@ -17,6 +17,7 @@ import Main from './pages/Main';
 import Addserver from './pages/Addserver';
 import Armaralarm from './pages/Armaralarm';
 import Mainnext from './pages/Mainnext';
+import Sensores from './pages/Sensores';
 import Telas from './pages/Telas';
 
 
@@ -39,6 +40,7 @@ export default function Routes(){
         <AppStack.Screen name="Armaralarm" component={Armaralarm} />
         <AppStack.Screen name="Mainnext" component={Mainnext} />
         <AppStack.Screen name="Disconnected" component={Disconnected} />
+        <AppStack.Screen name="Sensores" component={Sensores} />
 
         
         {/* 

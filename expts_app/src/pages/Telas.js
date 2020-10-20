@@ -47,6 +47,11 @@ export default function Telas({navigation}) {
      function Disconnected(){
       navigation.navigate('Disconnected');
      }
+     
+     function Sensores(){
+      navigation.navigate('Sensores');
+     }
+
 
 
      function Nulo(){
@@ -110,8 +115,8 @@ export default function Telas({navigation}) {
           <Text style={styles.buttonText}>Disconnected</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={Nulo} style={styles.button3}>
-          <Text style={styles.buttonText}>. . .</Text>
+        <TouchableOpacity onPress={Sensores} style={styles.button3}>
+          <Text style={styles.buttonText}>Sensores</Text>
         </TouchableOpacity>
 
         <TouchableOpacity onPress={Nulo} style={styles.button3}>
