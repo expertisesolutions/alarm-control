@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {
   View, Text, StyleSheet, KeyboardAvoidingView, StatusBar, Image,
-  ScrollView, SafeAreaView,
+  ScrollView, SafeAreaView, TouchableOpacity
 } from 'react-native';
 
 import CheckBox from '@react-native-community/checkbox';
@@ -151,28 +151,39 @@ export default function Sensores({navigation}) {
                                   </View>
                               </View>
 
-
-                              <View style={styles.containerSensor} > 
-                                  <View style={styles.viewSensor} >
-                                    <Text style={styles.textName} >Nome do Sensor</Text>
-                                    <Text style={styles.textType} >Dados do Sensor</Text>
-                                  </View>
-                                  <View style={styles.viewCheckbox}>
-                                    <CheckBox
-                                        disabled={false}
-                                        value={sensor006[1]}
-                                        onValueChange={(newValue) => set006([20,newValue])}
-                                    />
-                                  </View>
-                              </View>
-
-                              
                     </ScrollView>
                 </SafeAreaView>
       </View>
 
       <View style={styles.containerFoot}>
-        <Text>vgfdg</Text>
+        <View style={styles.viewFoot}>
+
+        <TouchableOpacity
+          onPress={handMain}>
+            <Image style={styles.imgLogo} source={logo} />
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={handMain}>
+            <Text>1</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={handMain}>
+            <Text>2</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={handMain}>
+            <Text>3</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={handMain}>
+            <Image style={styles.imgLogo} source={logo} />
+        </TouchableOpacity>
+
+        </View>
       </View>
 
     </KeyboardAvoidingView>
@@ -200,20 +211,23 @@ export default function Sensores({navigation}) {
     },
 
     containerBody: {
+      flex: 1,
       height: '65%',
-      justifyContent: 'flex-start',
+      justifyContent:'space-between',
       backgroundColor: '#FA4',
     },
 
     containerSensor:{
       flexDirection: 'row',
       justifyContent: 'space-between',
-      height: '20%',
+      height:50,
       backgroundColor: '#424',
 
     },
 
     containerFoot: {
+      alignItems: 'center',
+      justifyContent: 'flex-end',
       height: '13%',
     },
 
@@ -221,6 +235,11 @@ export default function Sensores({navigation}) {
       marginTop: 5,
       marginLeft: '5%',
       width: '60%',
+    },
+
+    viewFoot: {
+      flexDirection: 'row',
+      marginBottom: '5%'
     },
 
     imgLogo: {
