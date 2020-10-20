@@ -30,17 +30,17 @@ export default function Sensores({navigation}) {
 
       {/* BODY */}
 
-      <View style={styles.containerLogo}>
+      <View style={styles.containerLogo} >
        <Image style={styles.imgLogo} source={logo} />
       </View>
 
-      <View style={styles.containerBody}>
+      <View style={styles.containerBody} >
         
 
-        <View> 
-          <View>
-            <Text>Nome do Sensor</Text>
-            <Text>Dados do Sensor</Text>
+        <View style={styles.containerSensor} > 
+          <View style={styles.viewSensor} >
+            <Text style={styles.textName} >Nome do Sensor</Text>
+            <Text style={styles.textType} >Dados do Sensor</Text>
           </View>
           <Image style={styles.imgLogo} source={logo} />
         </View>
@@ -80,13 +80,35 @@ export default function Sensores({navigation}) {
       backgroundColor: '#FA4',
     },
 
+    containerSensor:{
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+    },
+
     containerFoot: {
       height: '13%',
+    },
+
+    viewSensor:{
+      marginTop: 5,
+      marginLeft: '5%',
+      width: '60%',
     },
 
     imgLogo: {
       height: 37,
       width: 37,
+    },
+
+    textName:{
+      color: '#000',
+      fontSize: 15,
+      fontWeight: 'bold',
+    },
+    textType: {
+      color: '#878585',
+      fontSize: 14,
+      fontWeight: 'normal',
     },
 
   })
