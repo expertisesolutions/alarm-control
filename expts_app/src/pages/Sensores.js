@@ -34,11 +34,22 @@ export default function Sensores({navigation}) {
        <Image style={styles.imgLogo} source={logo} />
       </View>
 
-      <View>
-        <Text>teste</Text>
+      <View style={styles.containerBody}>
+        
+
+        <View> 
+          <View>
+            <Text>Nome do Sensor</Text>
+            <Text>Dados do Sensor</Text>
+          </View>
+          <Image style={styles.imgLogo} source={logo} />
+        </View>
+
       </View>
 
-
+      <View style={styles.containerFoot}>
+        <Text>teste</Text>
+      </View>
 
     </KeyboardAvoidingView>
     );
@@ -59,8 +70,18 @@ export default function Sensores({navigation}) {
     containerLogo: {
       justifyContent: 'center',
       alignItems: 'center',
-      height: '30%',
+      height: '15%',
       padding: 30,
+      backgroundColor: '#1A4',
+    },
+
+    containerBody: {
+      height: '65%',
+      backgroundColor: '#FA4',
+    },
+
+    containerFoot: {
+      height: '13%',
     },
 
     imgLogo: {
