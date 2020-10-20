@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
   imgLeft: {
     height: 20,
     width: 20,
-    marginTop: 5,
+    marginTop: '10%',
   },
 
   });
