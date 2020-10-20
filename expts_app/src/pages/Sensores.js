@@ -30,7 +30,13 @@ export default function Sensores({navigation}) {
 
       {/* BODY */}
 
-      <View>Teste</View>
+      <View style={styles.containerLogo}>
+       <Image style={styles.imgLogo} source={logo} />
+      </View>
+
+      <View>
+        <Text>teste</Text>
+      </View>
 
 
 
@@ -41,5 +47,25 @@ export default function Sensores({navigation}) {
   
   const styles = StyleSheet.create({
 
+    containerbackground: {
+      flex: 1,
+      //backgroundColor: "#F2F5F7",
+      backgroundColor: "#FFF",
+      paddingHorizontal: 0,
+      justifyContent: 'space-between' ,
+      //paddingTop: Constant
+    },
+
+    containerLogo: {
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: '30%',
+      padding: 30,
+    },
+
+    imgLogo: {
+      height: 37,
+      width: 37,
+    },
 
   })
