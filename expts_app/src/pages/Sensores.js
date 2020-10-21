@@ -158,32 +158,42 @@ export default function Sensores({navigation}) {
                 </SafeAreaView>
       </View>
 
-      <View style={styles.containerFoot}>
+      <View style={styles.containerFooter}>
         <View style={styles.viewFoot}>
 
         <TouchableOpacity
-          onPress={handMain}>
-            <Image style={styles.imgLogo} source={left} />
+          onPress={handMain}
+          style={styles.nextPage}
+          >
+            <Image style={styles.imgFooter} source={left} />
         </TouchableOpacity>
 
         <TouchableOpacity
-          onPress={handMain}>
+          onPress={handMain}
+          style={styles.numberPage}
+          >
             <Text>1</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
-          onPress={handMain}>
+          onPress={handMain}
+          style={styles.numberPage}
+          >
             <Text>2</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
-          onPress={handMain}>
+          onPress={handMain}
+          style={styles.numberPage}
+          >
             <Text>3</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
-          onPress={handMain}>
-            <Image style={styles.imgLogo} source={left} />
+          onPress={handMain}
+          style={styles.nextPage}
+          >
+            <Image style={styles.imgFooter} source={right} />
         </TouchableOpacity>
 
         </View>
@@ -228,7 +238,7 @@ export default function Sensores({navigation}) {
 
     },
 
-    containerFoot: {
+    containerFooter: {
       alignItems: 'center',
       justifyContent: 'flex-end',
       height: '13%',
@@ -242,7 +252,9 @@ export default function Sensores({navigation}) {
 
     viewFoot: {
       flexDirection: 'row',
-      marginBottom: '5%'
+      marginBottom: '5%',
+      justifyContent: 'center',
+      alignItems: 'center'
     },
 
     imgLogo: {
@@ -275,5 +287,20 @@ export default function Sensores({navigation}) {
     scrollView: {
       height: '100%',
     },
+
+    numberPage:{
+      width: '10%',
+      alignItems: 'center',
+    },
+
+    nextPage:{
+      width: '10%',
+      alignItems: 'center',
+    },
+    
+    imgFooter:{
+      height: 18,
+      width: 18,
+    }
 
   })
