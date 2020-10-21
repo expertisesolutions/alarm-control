@@ -8,6 +8,9 @@ import CheckBox from '@react-native-community/checkbox';
 
 //media
 import logo from '../assets/logo.png';
+import left from '../assets/leftBlack.png';
+import right from '../assets/rightBlack.png';
+
 //componets
 import HeadBlue from './components/HeadBlue'
 
@@ -160,7 +163,7 @@ export default function Sensores({navigation}) {
 
         <TouchableOpacity
           onPress={handMain}>
-            <Image style={styles.imgLogo} source={logo} />
+            <Image style={styles.imgLogo} source={left} />
         </TouchableOpacity>
 
         <TouchableOpacity
@@ -180,7 +183,7 @@ export default function Sensores({navigation}) {
 
         <TouchableOpacity
           onPress={handMain}>
-            <Image style={styles.imgLogo} source={logo} />
+            <Image style={styles.imgLogo} source={left} />
         </TouchableOpacity>
 
         </View>
