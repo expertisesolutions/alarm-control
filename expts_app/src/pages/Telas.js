@@ -52,6 +52,10 @@ export default function Telas({navigation}) {
       navigation.navigate('Sensores');
      }
 
+     function Elementos(){
+       navigation.navigate('Elementos')
+     }
+
 
 
      function Nulo(){
@@ -119,8 +123,8 @@ export default function Telas({navigation}) {
           <Text style={styles.buttonText}>Sensores</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={Nulo} style={styles.button3}>
-          <Text style={styles.buttonText}>. . .</Text>
+        <TouchableOpacity onPress={Elementos} style={styles.button3}>
+          <Text style={styles.buttonText}>Elements</Text>
         </TouchableOpacity>
 
         <TouchableOpacity  style={styles.button3}>

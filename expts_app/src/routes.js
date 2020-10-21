@@ -19,6 +19,7 @@ import Armaralarm from './pages/Armaralarm';
 import Mainnext from './pages/Mainnext';
 import Sensores from './pages/Sensores';
 import Telas from './pages/Telas';
+import Elementos from './pages/Elements';
 
 
 const AppStack = createStackNavigator();
@@ -41,7 +42,7 @@ export default function Routes(){
         <AppStack.Screen name="Mainnext" component={Mainnext} />
         <AppStack.Screen name="Disconnected" component={Disconnected} />
         <AppStack.Screen name="Sensores" component={Sensores} />
-
+        <AppStack.Screen name="Elementos" component={Elementos} />
         
         {/* 
         <AppStack.Screen name="Teste" component={Teste} />
