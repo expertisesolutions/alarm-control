@@ -220,21 +220,21 @@ export default function Sensores({navigation}) {
       alignItems: 'center',
       height: '15%',
       padding: 30,
-      backgroundColor: '#1A4',
+      //backgroundColor: '#1A4',
     },
 
     containerBody: {
       flex: 1,
       height: '65%',
       justifyContent:'space-between',
-      backgroundColor: '#FA4',
+      //backgroundColor: '#FA4',
     },
 
     containerSensor:{
       flexDirection: 'row',
       justifyContent: 'space-between',
       height:50,
-      backgroundColor: '#424',
+      //backgroundColor: '#424',
 
     },
 
@@ -252,7 +252,7 @@ export default function Sensores({navigation}) {
 
     viewFoot: {
       flexDirection: 'row',
-      marginBottom: '5%',
+      marginBottom: 20,
       justifyContent: 'center',
       alignItems: 'center'
     },
@@ -281,7 +281,7 @@ export default function Sensores({navigation}) {
       marginTop: 5,
       alignItems: 'flex-end',
       justifyContent: 'center',
-      backgroundColor: '#B5a'
+      //backgroundColor: '#B5a'
     },
 
     scrollView: {
