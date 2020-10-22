@@ -1,7 +1,7 @@
 import React from 'react';
 import { 
   Text, View, StyleSheet, StatusBar, Image,TouchableOpacity,
-  KeyboardAvoidingView, Platform
+  KeyboardAvoidingView, Platform, ScrollView, SafeAreaView
 } from 'react-native';
 
 //media
@@ -73,65 +73,86 @@ export default function Telas({navigation}) {
        <Image style={styles.ImgLogo} source={logo} />
       </View>
 
-      <View style={styles.container}>
+      <View style={styles.viewBody}>
+        <SafeAreaView>
+            <ScrollView
+                contentInsetAdjustmentBehavior="automatic"
+                style={styles.scrollView}>
 
-        <TouchableOpacity onPress={Login} style={styles.button}>
-          <Text style={styles.buttonText}>. . . </Text>
-        </TouchableOpacity>
+                  <View style={styles.container}>
 
-        <TouchableOpacity onPress={Login} style={styles.button}>
-          <Text style={styles.buttonText}>Login</Text>
-        </TouchableOpacity>
+                    <TouchableOpacity onPress={Login} style={styles.button}>
+                      <Text style={styles.buttonText}>. . . </Text>
+                    </TouchableOpacity>
 
-        <TouchableOpacity onPress={SendCode} style={styles.button}>
-          <Text style={styles.buttonText}>SendEmail</Text>
-        </TouchableOpacity>
+                    <TouchableOpacity onPress={Login} style={styles.button}>
+                      <Text style={styles.buttonText}>Login</Text>
+                    </TouchableOpacity>
 
-        <TouchableOpacity onPress={SendCodePhone} style={styles.button}>
-          <Text style={styles.buttonText}>Send CodePhone</Text>
-        </TouchableOpacity>
+                    <TouchableOpacity onPress={SendCode} style={styles.button}>
+                      <Text style={styles.buttonText}>SendEmail</Text>
+                    </TouchableOpacity>
 
-        <TouchableOpacity onPress={Code} style={styles.button}>
-          <Text style={styles.buttonText}>Code</Text>
-        </TouchableOpacity>
-      </View >
+                    <TouchableOpacity onPress={SendCodePhone} style={styles.button}>
+                      <Text style={styles.buttonText}>Send CodePhone</Text>
+                    </TouchableOpacity>
 
-      <View style={styles.container}>
-      <TouchableOpacity onPress={Main} style={styles.button2}>
-          <Text style={styles.buttonText}>Main</Text>
-        </TouchableOpacity>
+                    <TouchableOpacity onPress={Code} style={styles.button}>
+                      <Text style={styles.buttonText}>Code</Text>
+                    </TouchableOpacity>
+                  </View >
 
-        <TouchableOpacity onPress={AddServer} style={styles.button2}>
-          <Text style={styles.buttonText}>AddServer</Text>
-        </TouchableOpacity>
+                  <View style={styles.container}>
+                  <TouchableOpacity onPress={Main} style={styles.button2}>
+                      <Text style={styles.buttonText}>Main</Text>
+                    </TouchableOpacity>
 
-        <TouchableOpacity onPress={AtivarAlarme} style={styles.button2}>
-          <Text style={styles.buttonText}>Ativa Alarme</Text>
-        </TouchableOpacity>
+                    <TouchableOpacity onPress={AddServer} style={styles.button2}>
+                      <Text style={styles.buttonText}>AddServer</Text>
+                    </TouchableOpacity>
 
-        <TouchableOpacity  style={styles.button2}>
-          <Text style={styles.buttonText}>. . .</Text>
-        </TouchableOpacity>
-      </View>
+                    <TouchableOpacity onPress={AtivarAlarme} style={styles.button2}>
+                      <Text style={styles.buttonText}>Ativa Alarme</Text>
+                    </TouchableOpacity>
 
-      <View style={styles.container}>
-      <TouchableOpacity onPress={Disconnected} style={styles.button3}>
-          <Text style={styles.buttonText}>Disconnected</Text>
-        </TouchableOpacity>
+                    <TouchableOpacity  style={styles.button2}>
+                      <Text style={styles.buttonText}>. . .</Text>
+                    </TouchableOpacity>
+                  </View>
 
-        <TouchableOpacity onPress={Sensores} style={styles.button3}>
-          <Text style={styles.buttonText}>Sensores</Text>
-        </TouchableOpacity>
+                  <View style={styles.container}>
+                    <TouchableOpacity onPress={Disconnected} style={styles.button3}>
+                        <Text style={styles.buttonText}>Disconnected</Text>
+                      </TouchableOpacity>
 
-        <TouchableOpacity onPress={Elementos} style={styles.button3}>
-          <Text style={styles.buttonText}>Elements</Text>
-        </TouchableOpacity>
+                      <TouchableOpacity onPress={Sensores} style={styles.button3}>
+                        <Text style={styles.buttonText}>Sensores</Text>
+                      </TouchableOpacity>
 
-        <TouchableOpacity  style={styles.button3}>
-          <Text style={styles.buttonText}>. . .</Text>
-        </TouchableOpacity>
-      </View>
+                      <TouchableOpacity onPress={Elementos} style={styles.button3}>
+                        <Text style={styles.buttonText}>Elements</Text>
+                      </TouchableOpacity>
 
+                      <TouchableOpacity  style={styles.button3}>
+                        <Text style={styles.buttonText}>. . .</Text>
+                      </TouchableOpacity>
+                    
+                    <TouchableOpacity  style={styles.button3}>
+                        <Text style={styles.buttonText}>. . .</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity  style={styles.button3}>
+                        <Text style={styles.buttonText}>. . .</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity  style={styles.button3}>
+                        <Text style={styles.buttonText}>. . .</Text>
+                    </TouchableOpacity>
+
+                  </View>
+              </ScrollView>
+            </SafeAreaView>
+          </View>
       <View style={styles.foot}>
       </View>
     </KeyboardAvoidingView>
@@ -154,6 +175,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 5,
+
   },
 
   button: {
@@ -196,20 +218,20 @@ const styles = StyleSheet.create({
   },
 
   foot: {
-    flex: 1,
     backgroundColor: "#003399",
-    position: 'relative',
-    height: 20,
-    left: 0,
-    top: 175,
+    height: '10%'
   },
 
+  viewBody: {
+    flex: 1,
+    height: '80%',
+  },
 
   view_foot: {
     marginTop: 40,
     //justifyContent: 'center',
     alignItems: 'center',
-    height: 46,
+    height:  '10%',
   },
 
   foottext: {
@@ -221,8 +243,12 @@ const styles = StyleSheet.create({
   ImgLogo: {
     height: 50,
     width: 50,
-  }
+  },
 
+  scrollView: {
+   // height: '100%',
+    alignSelf: 'stretch',
+  },
 
 });
 
