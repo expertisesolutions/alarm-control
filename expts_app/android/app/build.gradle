@@ -206,7 +206,7 @@ dependencies {
     compile 'com.facebook.fresco:animated-base-support:0.11.0'
 
     // For animated GIF support
-    implementation 'com.facebook.fresco:animated-gif:0.11.0'
+    compile 'com.facebook.fresco:animated-gif:0.11.0'
 
     // For WebP support, including animated WebP
     compile 'com.facebook.fresco:animated-webp:0.11.0'
@@ -214,6 +214,18 @@ dependencies {
 
     // For WebP support, without animations
     compile 'com.facebook.fresco:webpsupport:0.11.0'
+    
+    /*
+
+        Adicionado em node_modules/react-native/reactAndroid/proguard-rules.pro:
+        
+        conforme: https://reactnative.dev/docs/0.42/image
+        
+        -keep class com.facebook.imagepipeline.animated.factory.AnimatedFactoryImpl {
+        public AnimatedFactoryImpl(com.facebook.imagepipeline.bitmaps.PlatformBitmapFactory, com.facebook.imagepipeline.core.ExecutorSupplier);
+}
+
+    */
 
     // teste -------------------------------------------
 
