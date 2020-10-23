@@ -219,12 +219,12 @@ const styles = StyleSheet.create({
 
   foot: {
     backgroundColor: "#003399",
-    height: '10%'
+    height: '5%'
   },
 
   viewBody: {
     flex: 1,
-    height: '80%',
+    height: '85%',
   },
 
   view_foot: {
