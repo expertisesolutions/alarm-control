@@ -20,7 +20,7 @@ import Mainnext from './pages/Mainnext';
 import Sensores from './pages/Sensores';
 import Telas from './pages/Telas';
 import Elementos from './pages/Elements';
-
+import Loading from './pages/Loading';
 
 const AppStack = createStackNavigator();
 
@@ -30,6 +30,7 @@ export default function Routes(){
 
       <AppStack.Navigator screenOptions={{ headerShown: false}}>
         
+        <AppStack.Screen name="Loading" component={Loading} />
         <AppStack.Screen name="Telas" component={Telas} />
         <AppStack.Screen name="Login" component={Login} />
         <AppStack.Screen name="Sendcode" component={Sendcode} />
