@@ -79,8 +79,14 @@ export default function Sensores({navigation}) {
              />
            </View>
     {/*  ----------------------------------  */}
-    <View>
-             <Text> - 07</Text>
+            <View
+              style={{ alignItems: 'center', justifyContent: 'center'}}
+            >
+              <Text> - 07</Text>
+              <Image 
+                style={{ width: 180, height: 180}}
+                source={require('../assets/testes/EmpresaLoading.gif')}
+              />
            </View>
     {/*  ----------------------------------  */}
     <View>
@@ -90,7 +96,7 @@ export default function Sensores({navigation}) {
           </ScrollView>
        </SafeAreaView>
     </View>
-    );
+    );   
   };
   
 
