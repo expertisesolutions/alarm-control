@@ -11,8 +11,6 @@ import {
 
 export default function Login({navigation}) {
 
-  
-  const [stateOpacity, setOpacity] = useState(9);
   const [loadTime, setloadTime] = useState(true);
   const [loadText, setloadText] = useState();
 
@@ -29,7 +27,7 @@ export default function Login({navigation}) {
 
   async function loading(){
     for (let i = 0; i <= 6; i++){
-      await delay(500)
+      await delay(420)
       if(i != 6){
         setloadText(loadertext[i])
       }
@@ -39,9 +37,6 @@ export default function Login({navigation}) {
       }
     }
   }
-
-
-
 
 
      function handloLogin(){
