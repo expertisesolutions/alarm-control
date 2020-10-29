@@ -19,7 +19,7 @@ export default function SolicitaTeste({navigation}){
   const [buf, setBufer] = useState([]);
 
   function Return(){
-    navigation.navigate('Telas');
+    navigation.navigate('Telas');hh
   }
 
   async function data(){
@@ -36,7 +36,7 @@ export default function SolicitaTeste({navigation}){
     //console.log(await client.getStates());
 
     let bufer = await client.getStates();
-    console.log(bufer)
+    console.log(bufer[9].attributes.options)
     console.log('----------------------------------------------------------');
     setBufer(bufer)
    // console.log(await client.callService('spotify_music', 'media_player.play_media', { entity_id: 'media_player.spotify' }));
@@ -47,6 +47,10 @@ export default function SolicitaTeste({navigation}){
 
   function Teste(){
     main()
+  }
+
+  function Exibir(){
+    setData(buf[9].attributes.options)
   }
 
   return(
@@ -93,6 +97,9 @@ export default function SolicitaTeste({navigation}){
           </View>
           <TouchableOpacity onPress={Teste} style={styles.button}>
             <Text style={styles.buttontext}>Buscar</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={Exibir} style={styles.button}>
+            <Text style={styles.buttontext}>Exibir</Text>
           </TouchableOpacity>
         </View>
       </View>
