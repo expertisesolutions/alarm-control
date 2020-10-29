@@ -20,7 +20,8 @@ import Mainnext from './pages/Mainnext';
 import Sensores from './pages/Sensores';
 import Telas from './pages/Telas';
 import Elementos from './pages/Elements';
-import Loading from './pages/Loading';
+import Loading from './pages/Loading'; 
+import SolicitaTeste from './pages/SolicitaTeste';
 
 const AppStack = createStackNavigator();
 
@@ -44,6 +45,7 @@ export default function Routes(){
         <AppStack.Screen name="Disconnected" component={Disconnected} />
         <AppStack.Screen name="Sensores" component={Sensores} />
         <AppStack.Screen name="Elementos" component={Elementos} />
+        <AppStack.Screen name="SolicitaTeste" component={SolicitaTeste} />
         
         {/* 
         <AppStack.Screen name="Teste" component={Teste} />

@@ -56,7 +56,9 @@ export default function Telas({navigation}) {
        navigation.navigate('Elementos')
      }
 
-
+     function SolicitaTeste(){
+      navigation.navigate('SolicitaTeste')
+    }
 
      function Nulo(){
       
@@ -133,8 +135,8 @@ export default function Telas({navigation}) {
                         <Text style={styles.buttonText}>Elements</Text>
                       </TouchableOpacity>
 
-                      <TouchableOpacity  style={styles.button3}>
-                        <Text style={styles.buttonText}>. . .</Text>
+                      <TouchableOpacity  onPress={SolicitaTeste} style={styles.button3}> 
+                        <Text style={styles.buttonText}>Home Assitent</Text>
                       </TouchableOpacity>
                     
                     <TouchableOpacity  style={styles.button3}>
