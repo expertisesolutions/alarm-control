@@ -1,4 +1,4 @@
-import React from  'react';
+import React, {useState} from  'react';
 import {
   View, Text, TouchableOpacity, KeyboardAvoidingView, StyleSheet, 
   StatusBar, Image, TextInput
@@ -15,8 +15,15 @@ import Main from './Mainnext';
 
 export default function SolicitaTeste({navigation}){
 
+  const [dataHome, setData] = useState('teste');
+  const [buf, setBufer] = useState([]);
+
   function Return(){
     navigation.navigate('Telas');
+  }
+
+  async function data(){
+    setData = await client.getStates();
   }
 
   async function main () {
@@ -26,12 +33,14 @@ export default function SolicitaTeste({navigation}){
       token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI2Yjk4Y2ZhYzRkN2E0YjJhOWM0M2Y4OGM2YTk0OWQzOCIsImlhdCI6MTU5NzY5MjQ1MCwiZXhwIjoxOTEzMDUyNDUwfQ.0_uZvj7-7RZSZGpNq7BygRdX6UjXonnFQCO6CudQJnw'
     });
 
-    console.log(await client.getStates());
+    //console.log(await client.getStates());
 
+    let bufer = await client.getStates();
+    console.log(bufer)
     console.log('----------------------------------------------------------');
-
+    setBufer(bufer)
    // console.log(await client.callService('spotify_music', 'media_player.play_media', { entity_id: 'media_player.spotify' }));
-    console.log(await client.callService('media_player.play_media', '', { entity_id: 'media_player.spotify_ricardo_campos'}));
+    //console.log(await client.callService('media_player.play_media', '', { entity_id: 'media_player.spotify_ricardo_campos'}));
 
     //settest('teste debug');
   }
@@ -68,7 +77,11 @@ export default function SolicitaTeste({navigation}){
         </View>
         {/* body  */}
         <View style={styles.viewbody}>
-          <Text style={styles.textTitulo}> . . .</Text>
+          <Text 
+            style={styles.textTitulo} 
+          > 
+            {dataHome}
+          </Text>
           <View style={styles.viewInstru}>
             <Text style={styles.textoInstru}>
               ...
