@@ -4,14 +4,40 @@ import {
   StatusBar, Image, TextInput
 } from  'react-native';
 
+import hass from 'homeassistant-ws'
+//import configHass from '../secrets/Hasss'
+//import api from '../services/api';
+
 //media
 import Left from '../assets/leftBlack.png';
 import Logo from '../assets/logo.png';
+import Main from './Mainnext';
 
 export default function SolicitaTeste({navigation}){
 
   function Return(){
     navigation.navigate('Telas');
+  }
+
+  async function main () {
+    // Assuming hass running in `localhost`, under the default `8321` port:
+    const client = await hass({
+      host: '192.168.0.29',
+      token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI2Yjk4Y2ZhYzRkN2E0YjJhOWM0M2Y4OGM2YTk0OWQzOCIsImlhdCI6MTU5NzY5MjQ1MCwiZXhwIjoxOTEzMDUyNDUwfQ.0_uZvj7-7RZSZGpNq7BygRdX6UjXonnFQCO6CudQJnw'
+    });
+
+    console.log(await client.getStates());
+
+    console.log('----------------------------------------------------------');
+
+   // console.log(await client.callService('spotify_music', 'media_player.play_media', { entity_id: 'media_player.spotify' }));
+    console.log(await client.callService('media_player.play_media', '', { entity_id: 'media_player.spotify_ricardo_campos'}));
+
+    //settest('teste debug');
+  }
+
+  function Teste(){
+    main()
   }
 
   return(
@@ -52,7 +78,7 @@ export default function SolicitaTeste({navigation}){
       
             
           </View>
-          <TouchableOpacity onPress={Return} style={styles.button}>
+          <TouchableOpacity onPress={Teste} style={styles.button}>
             <Text style={styles.buttontext}>Buscar</Text>
           </TouchableOpacity>
         </View>
